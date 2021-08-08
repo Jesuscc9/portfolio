@@ -1,36 +1,86 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import "../GlobalStyles.css";
 import Navbar from "../components/Navbar";
-import image from "../assets/img/Illustration3DPerson.png";
-import Donut from "../assets/img/Donut.png";
-import Sphere from "../assets/img/Sphere.png";
-import Tube from "../assets/img/Tube.png";
-import TubeShort from "../assets/img/TubeShort.png";
-import { Main, Shapes } from "./styles/index.style";
+import Illustration from "../components/Illustration";
+import { Main, Shapes, WorkContainer } from "./styles/index.style";
+import { motion } from "framer-motion";
+import Projects from "../components/Projects";
+import Circle1 from "../assets/img/shapes/circle1.svg";
+import Circle2 from "../assets/img/shapes/circle2.svg";
+import Circle3 from "../assets/img/shapes/circle3.svg";
+import Circle4 from "../assets/img/shapes/circle4.svg";
+import Rocket from "../assets/img/shapes/rocket.png";
+import { unwatchViewport, watchViewport } from "tornis";
+import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 const IndexPage = () => {
+  const [viewport, setViewport] = useState(undefined);
+
+  const updateValues = ({ size }) => {
+    if (size.changed && !viewport) {
+      if (size.x < 800) {
+        setViewport("notpc");
+      } else {
+        setViewport("pc");
+      }
+    }
+  };
+
+  watchViewport(updateValues);
+  unwatchViewport(updateValues);
+
   return (
-    <>
+    <AnimateSharedLayout>
       <Shapes>
-        <img src={Donut} alt="" className="donut" />
-        <img src={Sphere} alt="" className="sphere" />
-        <img src={Tube} alt="" className="tube" />
-        <img src={TubeShort} alt="" className="tube-short" />
+        <img src={Circle1} alt="" />
+        <img src={Circle2} alt="" className="circle2" />
+        <img src={Circle3} alt="" className="circle3" />
+        <img src={Circle4} alt="" className="circle4" />
+        <img src={Circle4} alt="" className="circle5" />
       </Shapes>
       <Navbar />
       <Main>
-        <title>Jesus Cervantes</title>
+        <title>Jesús Cervantes l Portfolio</title>
         <div className="content">
           <div className="presentation">
-            <h1 className="name">Jesus Cervantes</h1>
-            <h1>Front-End Developer</h1>
+            <motion.h1
+              className="name"
+              initial={{ x: -900, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ type: "spring", duration: 1 }}
+            >
+              Jesús Cervantes
+            </motion.h1>
+            <motion.h1
+              initial={{ x: -900, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ type: "spring", duration: 1, delay: 0.3 }}
+            >
+              Front-End <br />
+              Developer
+            </motion.h1>
+            <motion.div className="rocket-container">
+              <img
+                src={Rocket}
+                alt=""
+                className={viewport == "pc" ? "rocket-pc" : "rocket-notpc"}
+              />
+            </motion.div>
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ type: "spring", duration: 1, delay: 1.7 }}
+            >
+              Contact me!
+            </motion.button>
           </div>
           <div className="illustration">
-            <img src={image} alt="" />
+            <Illustration />
           </div>
         </div>
       </Main>
-    </>
+      {/* <Projects /> */}
+    </AnimateSharedLayout>
   );
 };
 
