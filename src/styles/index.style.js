@@ -31,6 +31,41 @@ const rocketAnimPc = keyframes`
     /* animation-timing-function: linear; */
     opacity: 0;
   }
+  100%{
+    display: none;
+    visibility: hidden;
+  }
+`;
+
+const rocketAnim = keyframes`
+  0%{
+    transform: translate(100vw, -400px) rotate(270deg);
+    opacity: 0;
+  }
+  40%{
+    transform: translate(70vw, -400px) rotate(270deg);
+    opacity: 1;
+  }
+  50%{
+    transform: translate(70vw, -400px) rotate(180deg);
+    opacity: 1
+  }
+  60%{
+    transform: translate(70vw, 0px) rotate(180deg);
+    opacity: 1
+  }
+  70%{
+    transform: translate(70vw, 0px) rotate(270deg);
+    opacity: 1
+  }
+  80%{
+    transform: translate(0px, 0px) rotate(270deg);
+    opacity: 0
+  }
+  100%{
+    visibility: hidden;
+    display: none;
+  }
 `;
 
 const buttonAnim = keyframes`
@@ -47,33 +82,6 @@ const buttonAnim = keyframes`
   }
   100%{
     transform: scale(1);
-  }
-`;
-
-const rocketAnim = keyframes`
-  0%{
-    transform: translate(100vw, -400px) rotate(270deg);
-    opacity: 0;
-  }
-  30%{
-    transform: translate(70vw, -400px) rotate(270deg);
-    opacity: 1;
-  }
-  35%{
-    transform: translate(70vw, -400px) rotate(180deg);
-    opacity: 1
-  }
-  60%{
-    transform: translate(70vw, 0px) rotate(180deg);
-    opacity: 1
-  }
-  65%{
-    transform: translate(70vw, 0px) rotate(270deg);
-    opacity: 1
-  }
-  100%{
-    transform: translate(0px, 0px) rotate(270deg);
-    opacity: 0
   }
 `;
 
@@ -160,14 +168,16 @@ export const Main = styled.div`
           opacity: 0;
         }
 
-        .rocket-pc {
+        .rocket {
           animation: ${rocketAnimPc} 8s cubic-bezier(1, -0.3, 0.3, 1);
           animation-delay: 1s;
         }
 
-        .rocket-notpc {
-          animation: ${rocketAnim} 8s cubic-bezier(1, -0.3, 0.3, 1);
-          animation-delay: 1s;
+        @media (max-width: 800px) {
+          .rocket {
+            animation: ${rocketAnim} 8s cubic-bezier(1, -0.3, 0.3, 1);
+            animation-delay: 1s;
+          }
         }
       }
 

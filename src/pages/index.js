@@ -60,11 +60,7 @@ const IndexPage = () => {
               Developer
             </motion.h1>
             <motion.div className="rocket-container">
-              <img
-                src={Rocket}
-                alt=""
-                className={viewport == "pc" ? "rocket-pc" : "rocket-notpc"}
-              />
+              <img src={Rocket} alt="" className="rocket" />
             </motion.div>
             <motion.button
               initial={{ opacity: 0 }}
