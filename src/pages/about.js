@@ -6,7 +6,7 @@ import Donut from "../assets/img/Donut.png";
 import Sphere from "../assets/img/Sphere.png";
 import Tube from "../assets/img/Tube.png";
 import TubeShort from "../assets/img/TubeShort.png";
-import { Main, Shapes } from "./styles/index.style";
+import { Main, Shapes } from "../styles/index.style";
 import { motion } from "framer-motion";
 import icon from "../assets/img/Icon.png";
 

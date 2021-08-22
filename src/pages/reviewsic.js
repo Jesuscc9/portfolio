@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { ProjectHeader } from "../pages/styles/reviewsic.style";
+import { ProjectHeader } from "../styles/reviewsic.style";
 
 const ReviewsicPage = () => {
   return (

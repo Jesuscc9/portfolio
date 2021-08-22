@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../GlobalStyles.css";
 import Navbar from "../components/Navbar";
 import Illustration from "../components/Illustration";
-import { Main, Shapes, WorkContainer } from "./styles/index.style";
+import { Main, Shapes, WorkContainer } from "../styles/index.style";
 import { motion } from "framer-motion";
 import Projects from "../components/Projects";
 import Circle1 from "../assets/img/shapes/circle1.svg";
