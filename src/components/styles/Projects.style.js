@@ -3,30 +3,32 @@ import styled from "styled-components";
 export const WorkContainer = styled.div`
   z-index: 1;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(13px);
-  max-height: 100vh;
-  min-height: 100vh;
-  margin-top: -21px;
+  background-color: rgba(255, 255, 255, 1);
+  /* background: linear-gradient(
+    180deg,
+    rgba(244, 228, 255, 0.33) 16.67%,
+    #ecfdf1 34.9%,
+    rgba(228, 236, 255, 0.51) 55.73%,
+    rgba(255, 255, 255, 0.51) 100%
+  ); */
+  max-height: 170vh;
+  min-height: 170vh;
+  padding-top: 30px;
 
   h1 {
-    font-family: "Baloo 2", sans-serif;
+    font-family: "PT Sans", sans-serif;
     text-align: center;
-    font-size: 42px;
-    color: #585858;
+    font-size: 58px;
+    font-weight: bold;
+    color: #676767;
   }
 
   .content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     width: 90%;
     max-width: 95%;
     margin: auto;
-    flex-direction: column;
     padding-top: 30px;
     border-radius: 15px;
-    border: 1px solid;
     height: 100vh;
 
     a {
@@ -34,10 +36,17 @@ export const WorkContainer = styled.div`
       color: #000;
     }
 
+    .projects {
+      margin-top: 100px;
+    }
+
     .project {
       width: 700px;
-      margin-bottom: 100px;
+      margin: auto;
+      margin-bottom: 130px;
+      margin-top: 50px;
       border-radius: 10px;
+      max-width: 90%;
       background-color: #f4e4ff;
       cursor: pointer;
       transition: transform 0.2s;

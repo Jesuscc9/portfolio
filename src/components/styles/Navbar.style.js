@@ -23,9 +23,8 @@ const svgAnim = keyframes`
 `;
 
 export const Nav = styled.nav`
-  /* background-color: ${(props) =>
-    props.scrolled ? "rgba(253, 253, 253, 0)" : "rgba(255, 255, 255, 0)"}; */
-  background-color: rgba(255, 255, 255, 0);
+  background-color: ${(props) =>
+    props.scrolled ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0)"};
   display: flex;
   justify-content: space-between;
   padding: 10px 50px;

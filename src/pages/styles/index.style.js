@@ -4,26 +4,49 @@ const rocketAnimPc = keyframes`
   0%{
     transform: translate(100vw, -400px) rotate(270deg);
     opacity: 0;
+    /* animation-timing-function: cubic-bezier(.25,.1,1,1); */
   }
-  30%{
-    transform: translate(40vw, -400px) rotate(270deg);
+  40%{
+    transform: translate(55vw, -400px) rotate(270deg);
+    /* animation-timing-function: cubic-bezier(1,1,1,1); */
     opacity: 1;
   }
-  35%{
-    transform: translate(40vw, -400px) rotate(180deg);
-    opacity: 1
+  50%{
+    transform: translate(40vw, -300px) rotate(180deg);
+    /* animation-timing-function: ease-out; */
+    opacity: 1;
+  }
+  60%{
+    transform: translate(40vw, -50px) rotate(180deg);
+    /* animation-timing-function: ease-out; */
+    opacity: 1;
   }
   70%{
-    transform: translate(40vw, 0px) rotate(180deg);
-    opacity: 1
-  }
-  75%{
     transform: translate(40vw, 0px) rotate(270deg);
-    opacity: 1
+    /* animation-timing-function: linear; */
+    opacity: 1;
+  }
+  80%{
+    transform: translate(0px, 0px) rotate(270deg);
+    /* animation-timing-function: linear; */
+    opacity: 0;
+  }
+`;
+
+const buttonAnim = keyframes`
+  0%{
+    transform: scale(1);
+  }
+  
+  90%{
+    transform: scale(1);
+  }
+
+  95%{
+    transform: scale(1.2);
   }
   100%{
-    transform: translate(0px, 0px) rotate(270deg);
-    opacity: 0
+    transform: scale(1);
   }
 `;
 
@@ -40,11 +63,11 @@ const rocketAnim = keyframes`
     transform: translate(70vw, -400px) rotate(180deg);
     opacity: 1
   }
-  70%{
+  60%{
     transform: translate(70vw, 0px) rotate(180deg);
     opacity: 1
   }
-  75%{
+  65%{
     transform: translate(70vw, 0px) rotate(270deg);
     opacity: 1
   }
@@ -60,6 +83,17 @@ export const Main = styled.div`
   max-height: 95vh;
   min-height: 95vh;
   margin-top: calc(5vh);
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    max-height: 110vh;
+    min-height: 110vh;
+  }
+
+  @media (max-width: 640px) {
+    max-height: 125vh;
+    min-height: 125vh;
+  }
 
   .content {
     display: flex;
@@ -99,6 +133,10 @@ export const Main = styled.div`
         color: #8b8b8b;
         margin-top: 0px;
         margin-bottom: 0px;
+
+        @media (max-width: 768px) {
+          font-size: 65px;
+        }
       }
 
       .name {
@@ -106,6 +144,10 @@ export const Main = styled.div`
         font-size: 86px;
         color: #0085ff;
         margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+          font-size: 81px;
+        }
       }
 
       .rocket-container {
@@ -119,13 +161,13 @@ export const Main = styled.div`
         }
 
         .rocket-pc {
-          animation: ${rocketAnimPc} 7s ease-in-out;
-          animation-delay: 2.2s;
+          animation: ${rocketAnimPc} 8s cubic-bezier(1, -0.3, 0.3, 1);
+          animation-delay: 1s;
         }
 
         .rocket-notpc {
-          animation: ${rocketAnim} 7s ease-in-out;
-          animation-delay: 2.2s;
+          animation: ${rocketAnim} 8s cubic-bezier(1, -0.3, 0.3, 1);
+          animation-delay: 1s;
         }
       }
 
@@ -146,9 +188,15 @@ export const Main = styled.div`
         line-height: 30px;
         color: #fff;
         transition: background-color 0.2s;
+        animation: ${buttonAnim} 6.7s cubic-bezier(1, -0.3, 0.3, 1);
+        animation-delay: 1s;
 
         &:hover {
           background-color: #ff9d00;
+        }
+
+        @media (max-width: 768px) {
+          transform: scale(0.95);
         }
       }
     }

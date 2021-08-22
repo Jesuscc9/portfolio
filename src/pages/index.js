@@ -79,7 +79,7 @@ const IndexPage = () => {
           </div>
         </div>
       </Main>
-      {/* <Projects /> */}
+      <Projects />
     </AnimateSharedLayout>
   );
 };
