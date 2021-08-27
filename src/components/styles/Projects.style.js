@@ -3,17 +3,18 @@ import styled from "styled-components";
 export const WorkContainer = styled.div`
   z-index: 1;
   width: 100%;
-  background-color: rgba(255, 255, 255, 1);
+
   /* background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.33) 0%,
-    rgba(244, 228, 255, 0.43) 16.67%,
-    rgba(246, 208, 175, 0) 35.42%,
-    rgba(204, 235, 198, 0.24) 52.17%,
-    rgba(190, 221, 244, 0.21) 72.48%,
+    #fbf5ff 16.67%,
+    #fff4eb 35.42%,
+    #f7fff5 52.17%,
+    #e4f4ff 72.48%,
     rgba(255, 255, 255, 0.51) 100%
   ); */
-  background-color: rgba(244, 228, 255, 0.43);
+
+  background-color: #fff;
+
   padding-top: 30px;
 
   h1 {
@@ -38,12 +39,18 @@ export const WorkContainer = styled.div`
 
     .projects {
       margin-top: 100px;
+
+      > * {
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
     }
 
     .project {
       width: 700px;
       margin: auto;
-      margin-top: 50px;
+      margin: 130px auto;
       border-radius: 10px;
       max-width: 90%;
       background-color: #f4e4ff;
@@ -139,6 +146,60 @@ export const WorkContainer = styled.div`
 
       &:hover {
         transform: scale(1.02);
+      }
+    }
+
+    .lpdla-app {
+      background: rgba(255, 122, 0, 0.19);
+
+      .images {
+        background: linear-gradient(
+          131.81deg,
+          #ff655c 13.99%,
+          rgba(255, 184, 0, 0.19) 99.98%
+        );
+      }
+
+      .description {
+        h1 {
+          color: #b50000;
+        }
+      }
+    }
+
+    .camera-app {
+      background: rgba(77, 215, 67, 0.15);
+
+      .images {
+        background: linear-gradient(
+          131.81deg,
+          rgba(70, 211, 76, 0.69) 2.5%,
+          rgba(255, 211, 52, 0.51) 99.98%
+        );
+      }
+
+      .description {
+        h1 {
+          color: #008b16;
+        }
+      }
+    }
+
+    .covid-app {
+      background: rgba(0, 117, 255, 0.12);
+
+      .images {
+        background: linear-gradient(
+          131.81deg,
+          rgba(0, 102, 255, 0.74) 2.5%,
+          rgba(0, 133, 255, 0.31) 99.98%
+        );
+      }
+
+      .description {
+        h1 {
+          color: #005eca;
+        }
       }
     }
   }
