@@ -135,15 +135,8 @@ export const Main = styled.div`
       max-width: 700px;
 
       h1 {
-        font-family: "PT Sans", sans-serif;
-        font-size: 70px;
-        font-weight: bold;
-        color: #8b8b8b;
-        margin-top: 0px;
-        margin-bottom: 0px;
-
         @media (max-width: 768px) {
-          font-size: 65px;
+          font-size: 50px;
         }
       }
 

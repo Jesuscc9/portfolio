@@ -6,13 +6,14 @@ export const WorkContainer = styled.div`
   background-color: rgba(255, 255, 255, 1);
   /* background: linear-gradient(
     180deg,
-    rgba(244, 228, 255, 0.33) 16.67%,
-    #ecfdf1 34.9%,
-    rgba(228, 236, 255, 0.51) 55.73%,
+    rgba(255, 255, 255, 0.33) 0%,
+    rgba(244, 228, 255, 0.43) 16.67%,
+    rgba(246, 208, 175, 0) 35.42%,
+    rgba(204, 235, 198, 0.24) 52.17%,
+    rgba(190, 221, 244, 0.21) 72.48%,
     rgba(255, 255, 255, 0.51) 100%
   ); */
-  max-height: 170vh;
-  min-height: 170vh;
+  background-color: rgba(244, 228, 255, 0.43);
   padding-top: 30px;
 
   h1 {
@@ -29,7 +30,6 @@ export const WorkContainer = styled.div`
     margin: auto;
     padding-top: 30px;
     border-radius: 15px;
-    height: 100vh;
 
     a {
       text-decoration: none !important;
@@ -43,7 +43,6 @@ export const WorkContainer = styled.div`
     .project {
       width: 700px;
       margin: auto;
-      margin-bottom: 130px;
       margin-top: 50px;
       border-radius: 10px;
       max-width: 90%;
@@ -53,7 +52,7 @@ export const WorkContainer = styled.div`
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 15px 20px;
+      padding: 20px 20px;
       text-decoration: none !important;
 
       p {
@@ -120,14 +119,14 @@ export const WorkContainer = styled.div`
 
       .description {
         width: 450px;
-
         margin-right: 10px;
 
         h1 {
           margin: 0px;
-          font-family: "Raleway", sans-serif;
-          font-size: 32px;
+          font-family: "Asap", sans-serif;
+          font-size: 40px;
           text-align: left;
+          color: rgba(82, 0, 146, 0.83);
         }
 
         p {
