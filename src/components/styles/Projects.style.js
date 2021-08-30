@@ -3,17 +3,17 @@ import styled from "styled-components";
 export const WorkContainer = styled.div`
   z-index: 1;
   width: 100%;
+  background-color: #fff;
 
-  /* background: linear-gradient(
+  background: linear-gradient(
     180deg,
-    #fbf5ff 16.67%,
+    rgba(255, 255, 255, 0.33) 0%,
+    #f9f1ff 16.67%,
     #fff4eb 35.42%,
     #f7fff5 52.17%,
     #e4f4ff 72.48%,
     rgba(255, 255, 255, 0.51) 100%
-  ); */
-
-  background-color: #fff;
+  );
 
   padding-top: 30px;
 
@@ -38,11 +38,12 @@ export const WorkContainer = styled.div`
     }
 
     .projects {
-      margin-top: 100px;
+      box-sizing: content-box;
+      padding-bottom: 100px;
 
       > * {
         &:last-child {
-          margin-bottom: 0px;
+          margin-bottom: 100px;
         }
       }
     }
@@ -50,7 +51,7 @@ export const WorkContainer = styled.div`
     .project {
       width: 700px;
       margin: auto;
-      margin: 130px auto;
+      margin: 165px auto;
       border-radius: 10px;
       max-width: 90%;
       background-color: #f4e4ff;

@@ -236,3 +236,26 @@ export const Shapes = styled.div`
     left: 75%;
   }
 `;
+
+export const ContactInfo = styled.div`
+  .email-info {
+    border: 1px solid;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+
+    .rotate-text {
+      transform: rotate(90deg);
+      position: relative;
+      right: 50px;
+      width: 255px;
+    }
+  }
+
+  .line {
+    width: 2px;
+    height: 200px;
+    background-color: blue;
+  }
+`;

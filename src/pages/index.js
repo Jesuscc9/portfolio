@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "../GlobalStyles.css";
 import Navbar from "../components/Navbar";
+import AboutMe from "../components/AboutMe";
 import Illustration from "../components/Illustration";
-import { Main, Shapes, WorkContainer } from "../styles/index.style";
+import {
+  ContactInfo,
+  Main,
+  Shapes,
+  WorkContainer,
+} from "../styles/index.style";
 import { motion } from "framer-motion";
 import Projects from "../components/Projects";
 import Circle1 from "../assets/img/shapes/circle1.svg";
@@ -75,7 +81,18 @@ const IndexPage = () => {
           </div>
         </div>
       </Main>
+      <AboutMe />
       <Projects />
+      {/* <ContactInfo>
+        <div className="email-info">
+          <div className="rotate-text">
+            <a href="mailto:jesus.cervantes0801@gmail.com">
+              <p>jesus.cervantes0801@gmail.com</p>
+            </a>
+          </div>
+          <div className="line"></div>
+        </div>
+      </ContactInfo> */}
     </AnimateSharedLayout>
   );
 };
