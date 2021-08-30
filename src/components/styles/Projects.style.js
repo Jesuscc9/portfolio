@@ -17,14 +17,6 @@ export const WorkContainer = styled.div`
 
   padding-top: 30px;
 
-  h1 {
-    font-family: "PT Sans", sans-serif;
-    text-align: center;
-    font-size: 58px;
-    font-weight: bold;
-    color: #676767;
-  }
-
   .content {
     width: 90%;
     max-width: 95%;
@@ -143,6 +135,12 @@ export const WorkContainer = styled.div`
           font-family: "Poppins", sans-serif;
           text-align: justify;
         }
+
+        a {
+          color: rgba(82, 0, 146, 0.83);
+          text-decoration: underline !important;
+          cursor: arrow;
+        }
       }
 
       &:hover {
@@ -150,7 +148,7 @@ export const WorkContainer = styled.div`
       }
     }
 
-    .lpdla-app {
+    .lpdla {
       background: rgba(255, 122, 0, 0.19);
 
       .images {
@@ -168,7 +166,7 @@ export const WorkContainer = styled.div`
       }
     }
 
-    .camera-app {
+    .camera {
       background: rgba(77, 215, 67, 0.15);
 
       .images {
@@ -186,7 +184,7 @@ export const WorkContainer = styled.div`
       }
     }
 
-    .covid-app {
+    .covidrv {
       background: rgba(0, 117, 255, 0.12);
 
       .images {

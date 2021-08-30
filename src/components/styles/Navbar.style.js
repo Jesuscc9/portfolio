@@ -41,11 +41,11 @@ export const Nav = styled.nav`
   position: fixed;
   top: 0px;
   z-index: 2;
-  transition: background-color 0.4s, box-shadow 0.4s, padding 0.4s;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease,
+    padding 0.4s ease;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   box-sizing: border-box;
-
   h1 {
     margin: 0px;
     font-family: "Baloo 2", cursive;
