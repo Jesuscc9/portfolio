@@ -34,15 +34,14 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0px ${(props) => (props.scrolled ? "30px" : "60px")};
-  max-height: ${(props) => (props.scrolled ? "7vh" : "9vh")};
-  min-height: 8vh;
+  height: ${(props) => (props.scrolled ? "7.5vh" : "9vh")};
   min-width: calc(100vw);
   max-width: 100vw;
   position: fixed;
   top: 0px;
   z-index: 2;
   transition: background-color 0.4s ease, box-shadow 0.4s ease,
-    padding 0.4s ease;
+    padding 0.4s ease, height 0.4s ease;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   box-sizing: border-box;
