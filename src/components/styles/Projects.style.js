@@ -7,7 +7,7 @@ export const WorkContainer = styled.div`
 
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.33) 0%,
+    #eff8ff 0%,
     #f9f1ff 16.67%,
     #fff4eb 35.42%,
     #f7fff5 52.17%,

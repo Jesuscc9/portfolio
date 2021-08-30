@@ -24,6 +24,23 @@ h1 {
   color: #676767;
 }
 
+input,
+button,
+submit {
+  padding: 8px 20px;
+  background: #0085ff;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
 p {
   margin: 0px;
   font-family: "Poppins", sans-serif;

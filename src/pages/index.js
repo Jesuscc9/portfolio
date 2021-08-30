@@ -81,6 +81,8 @@ const IndexPage = () => {
           </div>
         </div>
       </Main>
+      <br />
+      <br />
       <AboutMe />
       <Projects />
       {/* <ContactInfo>

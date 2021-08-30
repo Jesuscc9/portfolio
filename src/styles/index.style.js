@@ -135,6 +135,11 @@ export const Main = styled.div`
       max-width: 700px;
 
       h1 {
+        font-family: "PT Sans", sans-serif;
+        font-size: 70px;
+        font-weight: bold;
+        color: #8b8b8b;
+        text-align: left;
         @media (max-width: 768px) {
           font-size: 50px;
         }
@@ -177,19 +182,8 @@ export const Main = styled.div`
       button {
         z-index: 2;
         margin-top: 40px;
-        width: 152px;
-        height: 50px;
         background: #ffb930;
-        border-radius: 10px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 30px;
-        color: #fff;
+
         transition: background-color 0.2s;
         animation: ${buttonAnim} 6.7s cubic-bezier(1, -0.3, 0.3, 1);
         animation-delay: 1s;
