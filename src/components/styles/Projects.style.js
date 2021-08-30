@@ -15,18 +15,19 @@ export const WorkContainer = styled.div`
     rgba(255, 255, 255, 0.51) 100%
   );
 
-  padding-top: 30px;
-
   .content {
     width: 90%;
     max-width: 95%;
     margin: auto;
-    padding-top: 30px;
     border-radius: 15px;
 
     a {
       text-decoration: none !important;
       color: #000;
+    }
+
+    h1 {
+      margin-top: 200px;
     }
 
     .projects {
@@ -148,6 +149,10 @@ export const WorkContainer = styled.div`
       }
     }
 
+    .reviewsic {
+      margin-top: 120px;
+    }
+
     .lpdla {
       background: rgba(255, 122, 0, 0.19);
 
@@ -161,6 +166,10 @@ export const WorkContainer = styled.div`
 
       .description {
         h1 {
+          color: #b50000;
+        }
+
+        a {
           color: #b50000;
         }
       }
@@ -181,6 +190,10 @@ export const WorkContainer = styled.div`
         h1 {
           color: #008b16;
         }
+
+        a {
+          color: #008b16;
+        }
       }
     }
 
@@ -197,6 +210,10 @@ export const WorkContainer = styled.div`
 
       .description {
         h1 {
+          color: #005eca;
+        }
+
+        a {
           color: #005eca;
         }
       }
