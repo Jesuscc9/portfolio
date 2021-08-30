@@ -24,19 +24,27 @@ const svgAnim = keyframes`
 
 export const Nav = styled.nav`
   background-color: ${(props) =>
-    props.scrolled ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0)"};
+    props.scrolled ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0)"};
+  backdrop-filter: ${(props) => (props.scrolled ? "blur(10px);" : "blur(0px)")};
+
+  box-shadow: ${(props) =>
+    props.scrolled ? "rgba(149, 157, 165, 0.2) 0px 8px 24px;" : ""};
+
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
-  /* backdrop-filter: blur(3px); */
-  max-height: 5vh;
-  min-height: 5vh;
-  min-width: calc(100vw - 100px);
+  align-items: center;
+  padding: 0px ${(props) => (props.scrolled ? "30px" : "60px")};
+  max-height: ${(props) => (props.scrolled ? "7vh" : "9vh")};
+  min-height: 8vh;
+  min-width: calc(100vw);
   max-width: 100vw;
   position: fixed;
   top: 0px;
   z-index: 2;
-  transition: background-color 0.4s;
+  transition: background-color 0.4s, box-shadow 0.4s, padding 0.4s;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-sizing: border-box;
 
   h1 {
     margin: 0px;
