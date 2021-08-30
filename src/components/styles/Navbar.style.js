@@ -34,7 +34,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0px ${(props) => (props.scrolled ? "30px" : "60px")};
-  height: ${(props) => (props.scrolled ? "7.5vh" : "9vh")};
+  height: ${(props) => (props.scrolled ? "7vh" : "9vh")};
   min-width: calc(100vw);
   max-width: 100vw;
   position: fixed;
