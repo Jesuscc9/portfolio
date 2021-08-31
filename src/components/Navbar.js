@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Nav } from "./styles/Navbar.style";
 import { Link } from "gatsby";
 import { watchViewport } from "tornis";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -50,6 +52,9 @@ const Navbar = () => {
             </svg>
           </div>
         </Link>
+      </div>
+      <div className="menu-bar">
+        <FontAwesomeIcon icon={faBars} />
       </div>
     </Nav>
   );

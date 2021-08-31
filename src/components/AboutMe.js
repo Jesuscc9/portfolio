@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 const AboutMe = () => {
   return (
     <AboutmeContainer>
-      <Fade>
+      <Fade delay="400">
         <div className="about-me">
           <h1>Who am I?</h1>
           <p>

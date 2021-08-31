@@ -39,27 +39,27 @@ const rocketAnimPc = keyframes`
 
 const rocketAnim = keyframes`
   0%{
-    transform: translate(100vw, -400px) rotate(270deg);
+    transform: translate(100vw, -400px) rotate(270deg) scale(0.7);
     opacity: 0;
   }
   40%{
-    transform: translate(70vw, -400px) rotate(270deg);
+    transform: translate(70vw, -400px) rotate(270deg) scale(0.7);
     opacity: 1;
   }
   50%{
-    transform: translate(70vw, -400px) rotate(180deg);
+    transform: translate(70vw, -400px) rotate(180deg) scale(0.7);
     opacity: 1
   }
   60%{
-    transform: translate(70vw, 0px) rotate(180deg);
+    transform: translate(70vw, 0px) rotate(180deg) scale(0.7);
     opacity: 1
   }
   70%{
-    transform: translate(70vw, 0px) rotate(270deg);
+    transform: translate(70vw, 0px) rotate(270deg) scale(0.7);
     opacity: 1
   }
   80%{
-    transform: translate(0px, 0px) rotate(270deg);
+    transform: translate(0px, 0px) rotate(270deg) scale(0.7);
     opacity: 0
   }
   100%{
@@ -120,6 +120,12 @@ export const Main = styled.div`
         z-index: 1;
       }
 
+      @media (max-width: 1286px) {
+        transform: scale(1);
+        position: relative;
+        top: -60px;
+      }
+
       .vector {
         position: absolute;
         z-index: -1;
@@ -136,23 +142,24 @@ export const Main = styled.div`
 
       h1 {
         font-family: "PT Sans", sans-serif;
-        font-size: 70px;
+        font-size: calc(30px + 3.5vw);
         font-weight: bold;
         color: #8b8b8b;
         text-align: left;
-        @media (max-width: 768px) {
-          font-size: 50px;
+
+        @media screen and (min-width: 1200px) {
+          font-size: 72px;
         }
       }
 
       .name {
         font-family: "PT Sans", sans-serif;
-        font-size: 86px;
         color: #0085ff;
         margin-bottom: 10px;
+        font-size: calc(46px + 4.5vw);
 
-        @media (max-width: 768px) {
-          font-size: 81px;
+        @media screen and (min-width: 1200px) {
+          font-size: 84px;
         }
       }
 
@@ -210,6 +217,12 @@ export const Shapes = styled.div`
     top: 0px;
   }
 
+  .circle1 {
+    @media (max-width: 768px) {
+      width: 250px;
+    }
+  }
+
   .circle2 {
     left: 7%;
     top: 80%;
@@ -218,6 +231,10 @@ export const Shapes = styled.div`
   .circle3 {
     top: 5%;
     left: 40%;
+
+    @media (max-width: 768px) {
+      opacity: 0;
+    }
   }
 
   .circle4 {

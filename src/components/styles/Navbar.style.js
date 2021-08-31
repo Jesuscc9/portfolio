@@ -23,17 +23,20 @@ const svgAnim = keyframes`
 `;
 
 export const Nav = styled.nav`
-  background-color: ${(props) =>
-    props.scrolled ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0)"};
-  backdrop-filter: ${(props) => (props.scrolled ? "blur(10px);" : "blur(0px)")};
+  @media (max-width: 768px) {
+    padding: 0px ${(props) => (props.scrolled ? "30px" : "30px")};
+  }
 
+  background-color: ${(props) =>
+    props.scrolled ? "rgba(255, 255, 255, 0.3)" : "rgba(255, 255, 255, 0)"};
+  backdrop-filter: ${(props) => (props.scrolled ? "blur(10px);" : "blur(0px)")};
+  padding: 0px ${(props) => (props.scrolled ? "30px" : "60px")};
   box-shadow: ${(props) =>
     props.scrolled ? "rgba(149, 157, 165, 0.2) 0px 8px 24px;" : ""};
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px ${(props) => (props.scrolled ? "30px" : "60px")};
   height: ${(props) => (props.scrolled ? "7vh" : "9vh")};
   min-width: calc(100vw);
   max-width: 100vw;
@@ -72,6 +75,12 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    display: flex;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     a {
       margin: 0px 30px;
@@ -128,6 +137,17 @@ export const Nav = styled.nav`
           --offset: 180px;
         }
       }
+    }
+  }
+
+  .menu-bar {
+    color: #7c7c7c;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: block;
     }
   }
 `;

@@ -38,7 +38,7 @@ const IndexPage = () => {
   return (
     <AnimateSharedLayout>
       <Shapes>
-        <img src={Circle1} alt="" />
+        <img src={Circle1} alt="" className="circle1" />
         <img src={Circle2} alt="" className="circle2" />
         <img src={Circle3} alt="" className="circle3" />
         <img src={Circle4} alt="" className="circle4" />
