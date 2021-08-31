@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const AboutmeContainer = styled.div`
-  padding-top: 100px;
+  padding-top: 50px;
 
   .about-me {
-    margin-top: 200px;
     width: 950px;
     max-width: 85%;
     height: auto;
@@ -19,6 +18,11 @@ export const AboutmeContainer = styled.div`
 
     h1 {
       color: #0085ff;
+      font-size: calc(32px + 4vw);
+
+      @media screen and (min-width: 1200px) {
+        font-size: 58px;
+      }
     }
 
     button {

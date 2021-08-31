@@ -39,27 +39,27 @@ const rocketAnimPc = keyframes`
 
 const rocketAnim = keyframes`
   0%{
-    transform: translate(100vw, -400px) rotate(270deg) scale(0.7);
+    transform: translate(100vw, -400px) rotate(270deg) scale(0.8);
     opacity: 0;
   }
   40%{
-    transform: translate(70vw, -400px) rotate(270deg) scale(0.7);
+    transform: translate(70vw, -400px) rotate(270deg) scale(0.8);
     opacity: 1;
   }
   50%{
-    transform: translate(70vw, -400px) rotate(180deg) scale(0.7);
+    transform: translate(70vw, -400px) rotate(180deg) scale(0.8);
     opacity: 1
   }
   60%{
-    transform: translate(70vw, 0px) rotate(180deg) scale(0.7);
+    transform: translate(70vw, 0px) rotate(180deg) scale(0.8);
     opacity: 1
   }
   70%{
-    transform: translate(70vw, 0px) rotate(270deg) scale(0.7);
+    transform: translate(70vw, 0px) rotate(270deg) scale(0.8);
     opacity: 1
   }
   80%{
-    transform: translate(0px, 0px) rotate(270deg) scale(0.7);
+    transform: translate(0px, 0px) rotate(270deg) scale(0.8);
     opacity: 0
   }
   100%{
@@ -240,6 +240,11 @@ export const Shapes = styled.div`
   .circle4 {
     left: 89%;
     top: 7%;
+
+    @media (max-width: 768px) {
+      left: 80%;
+      top: 7%;
+    }
   }
 
   .circle5 {

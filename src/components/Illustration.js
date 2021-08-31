@@ -199,21 +199,21 @@ const Illustration = () => {
               id="Vector_27"
               d="M185.553 332.856L280.302 331.885"
               stroke="#0085FF"
-              stroke-width="2"
+              strokeWidth="2"
               stroke-miterlimit="10"
             />
             <path
               id="Vector_28"
               d="M185.553 344.962L280.302 344.001"
               stroke="#0085FF"
-              stroke-width="2"
+              strokeWidth="2"
               stroke-miterlimit="10"
             />
             <path
               id="Vector_29"
               d="M185.553 357.078L280.302 356.107"
               stroke="#0085FF"
-              stroke-width="2"
+              strokeWidth="2"
               stroke-miterlimit="10"
             />
             <path

@@ -175,6 +175,18 @@ export const WorkContainer = styled.div`
       }
     }
 
+    .physiology {
+      background-color: rgba(211, 211, 211, 0.459);
+
+      .images {
+        background: linear-gradient(
+          to top,
+          #faaca8,
+          #ddd6f3
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    }
+
     .camera {
       background: rgba(77, 215, 67, 0.15);
 

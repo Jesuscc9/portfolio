@@ -28,7 +28,7 @@ export const Nav = styled.nav`
   }
 
   background-color: ${(props) =>
-    props.scrolled ? "rgba(255, 255, 255, 0.3)" : "rgba(255, 255, 255, 0)"};
+    props.scrolled ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0)"};
   backdrop-filter: ${(props) => (props.scrolled ? "blur(10px);" : "blur(0px)")};
   padding: 0px ${(props) => (props.scrolled ? "30px" : "60px")};
   box-shadow: ${(props) =>
