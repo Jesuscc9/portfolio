@@ -17,7 +17,9 @@ const Project = () => {
 
         return (
           <LightSpeed {...{ left: even, right: !even }}>
-            <motion.div className={`project ${project.shortName}`}>
+            <motion.div
+              className={`project ${project.shortName} ${even && "even"}`}
+            >
               {even ? (
                 <>
                   <ProjectImages />

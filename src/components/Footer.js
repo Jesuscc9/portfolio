@@ -1,20 +1,18 @@
 import React from "react";
 import { CustomFooter } from "./styles/Footer.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 import {
   faEnvelope,
-  faLocationArrow,
-  faMailBulk,
-  faMapMarker,
   faMapMarkerAlt,
   faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  faFacebook,
   faGithub,
+  faGithubSquare,
   faInstagram,
+  faInstagramSquare,
   faMedium,
+  faMediumM,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
@@ -39,9 +37,21 @@ const Footer = () => {
       </div>
       <div className="social">
         <h2>Social Media</h2>
-        <div className="icons">
+        {/* <div className="icons">
           <a href="https://jesuscc9.medium.com/" target="_blank">
             <FontAwesomeIcon icon={faMedium} />
+          </a>
+          <a href="https://www.instagram.com/jesuscc989/" target="_blank">
+            <FontAwesomeIcon icon={faInstagramSquare} />
+          </a>
+          <a href="https://github.com/Jesuscc9/" target="_blank">
+            <FontAwesomeIcon icon={faGithubSquare} />
+          </a>
+        </div> */}
+
+        <div className="icons">
+          <a href="https://jesuscc9.medium.com/" target="_blank">
+            <FontAwesomeIcon icon={faMediumM} />
           </a>
           <a href="https://www.instagram.com/jesuscc989/" target="_blank">
             <FontAwesomeIcon icon={faInstagram} />

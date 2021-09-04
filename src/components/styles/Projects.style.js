@@ -56,7 +56,7 @@ export const WorkContainer = styled.div`
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 20px 20px;
+      padding: 20px;
       text-decoration: none !important;
 
       p {
@@ -146,6 +146,28 @@ export const WorkContainer = styled.div`
 
       &:hover {
         transform: scale(1.02);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .project {
+        justify-content: center;
+        padding: 30px;
+        box-sizing: border-box;
+
+        .description {
+          flex-basis: 100%;
+          width: 100%;
+        }
+
+        .images {
+          margin: auto;
+          margin-top: 40px;
+        }
+      }
+
+      .even {
+        flex-direction: column-reverse;
       }
     }
 

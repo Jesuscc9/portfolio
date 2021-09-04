@@ -61,6 +61,30 @@ export const CustomFooter = styled.footer`
       svg {
         font-size: 34px;
         color: #0066ff;
+        border-radius: 16px;
+        transition: transform 0.2s, box-shadow 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: rgba(130, 193, 255, 0.2) 0px 8px 24px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 583px) {
+    .contact {
+      h2 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+    }
+
+    .social {
+      margin-top: 60px;
+
+      h2 {
+        margin-bottom: 40px;
       }
     }
   }
