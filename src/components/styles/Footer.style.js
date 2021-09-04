@@ -47,7 +47,7 @@ export const CustomFooter = styled.footer`
     align-items: center;
 
     h2 {
-      margin: 0px 20px;
+      margin: 0px 60px;
     }
 
     .icons {

@@ -11,6 +11,8 @@ import {
   faGithubSquare,
   faInstagram,
   faInstagramSquare,
+  faLinkedin,
+  faLinkedinIn,
   faMedium,
   faMediumM,
 } from "@fortawesome/free-brands-svg-icons";
@@ -51,7 +53,10 @@ const Footer = () => {
           <a href="https://github.com/Jesuscc9/" target="_blank">
             <FontAwesomeIcon icon={faGithubSquare} />
           </a>
-        </div> */}
+          <a href="https://www.linkedin.com/in/jesuscc9/" target="_blank">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </div>  */}
 
           <div className="icons">
             <a href="https://jesuscc9.medium.com/" target="_blank">
@@ -62,6 +67,9 @@ const Footer = () => {
             </a>
             <a href="https://github.com/Jesuscc9/" target="_blank">
               <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a href="https://www.linkedin.com/in/jesuscc9/" target="_blank">
+              <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </div>
         </Fade>
