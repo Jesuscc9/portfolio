@@ -190,8 +190,6 @@ export const Main = styled.div`
         z-index: 2;
         margin-top: 40px;
         background: #ffb930;
-
-        transition: background-color 0.2s;
         animation: ${buttonAnim} 6.7s cubic-bezier(1, -0.3, 0.3, 1);
         animation-delay: 1s;
 

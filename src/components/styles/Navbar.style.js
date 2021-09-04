@@ -48,6 +48,8 @@ export const Nav = styled.nav`
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   box-sizing: border-box;
+  min-height: 50px;
+
   h1 {
     margin: 0px;
     font-family: "Baloo 2", cursive;

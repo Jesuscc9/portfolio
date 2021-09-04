@@ -27,6 +27,11 @@ export const AboutmeContainer = styled.div`
 
     button {
       margin: 20px auto;
+      transition: background-color 0.2s, transform 0.2s;
+
+      &:hover {
+        background-color: #0077e6;
+      }
     }
 
     p {
