@@ -4,31 +4,25 @@ const rocketAnimPc = keyframes`
   0%{
     transform: translate(100vw, -400px) rotate(270deg);
     opacity: 0;
-    /* animation-timing-function: cubic-bezier(.25,.1,1,1); */
   }
   40%{
     transform: translate(55vw, -400px) rotate(270deg);
-    /* animation-timing-function: cubic-bezier(1,1,1,1); */
     opacity: 1;
   }
   50%{
     transform: translate(40vw, -300px) rotate(180deg);
-    /* animation-timing-function: ease-out; */
     opacity: 1;
   }
   60%{
     transform: translate(40vw, -50px) rotate(180deg);
-    /* animation-timing-function: ease-out; */
     opacity: 1;
   }
   70%{
     transform: translate(40vw, 0px) rotate(270deg);
-    /* animation-timing-function: linear; */
     opacity: 1;
   }
   80%{
     transform: translate(0px, 0px) rotate(270deg);
-    /* animation-timing-function: linear; */
     opacity: 0;
   }
   100%{
@@ -39,23 +33,23 @@ const rocketAnimPc = keyframes`
 
 const rocketAnim = keyframes`
   0%{
-    transform: translate(100vw, -400px) rotate(270deg) scale(0.8);
+    transform: translate(100vw, -370px) rotate(270deg) scale(0.8);
     opacity: 0;
   }
   40%{
-    transform: translate(70vw, -400px) rotate(270deg) scale(0.8);
+    transform: translate(60vw, -370px) rotate(270deg) scale(0.8);
     opacity: 1;
   }
   50%{
-    transform: translate(70vw, -400px) rotate(180deg) scale(0.8);
+    transform: translate(50vw, -300px) rotate(180deg) scale(0.8);
     opacity: 1
   }
   60%{
-    transform: translate(70vw, 0px) rotate(180deg) scale(0.8);
+    transform: translate(50vw, -50px) rotate(180deg) scale(0.8);
     opacity: 1
   }
   70%{
-    transform: translate(70vw, 0px) rotate(270deg) scale(0.8);
+    transform: translate(50vw, 0px) rotate(270deg) scale(0.8);
     opacity: 1
   }
   80%{
@@ -90,7 +84,7 @@ export const Main = styled.div`
   width: 100%;
   max-height: 95vh;
   min-height: 95vh;
-  margin-top: calc(5vh);
+  padding-top: 5vh;
   overflow: hidden;
 
   @media (max-width: 768px) {

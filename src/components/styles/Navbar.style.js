@@ -42,7 +42,7 @@ export const Nav = styled.nav`
   max-width: 100vw;
   position: fixed;
   top: 0px;
-  z-index: 2;
+  z-index: 1;
   transition: background-color 0.4s ease, box-shadow 0.4s ease,
     padding 0.4s ease, height 0.4s ease;
   border-bottom-left-radius: 8px;
