@@ -19,6 +19,7 @@ import Circle4 from "../assets/img/shapes/circle4.svg";
 import Rocket from "../assets/img/shapes/rocket.png";
 import { unwatchViewport, watchViewport } from "tornis";
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { useRef } from "react";
 
 const IndexPage = () => {
   const [viewport, setViewport] = useState(undefined);
@@ -36,8 +37,11 @@ const IndexPage = () => {
   watchViewport(updateValues);
   unwatchViewport(updateValues);
 
+  const mailButtonRef = useRef(null);
+
   return (
     <AnimateSharedLayout>
+      <a href="mailto:jesus.cervantes0801@gmail.com" ref={mailButtonRef}></a>
       <Shapes>
         <img src={Circle1} alt="" className="circle1" />
         <img src={Circle2} alt="" className="circle2" />
@@ -73,6 +77,9 @@ const IndexPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ type: "spring", duration: 1, delay: 1.7 }}
+              onClick={() => {
+                mailButtonRef.current.click();
+              }}
             >
               Contact me!
             </motion.button>

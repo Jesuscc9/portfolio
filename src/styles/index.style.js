@@ -108,6 +108,7 @@ export const Main = styled.div`
     padding-top: 50px;
 
     .illustration {
+      z-index: -1;
       img {
         margin-top: 40px;
         width: 600px;
@@ -181,7 +182,7 @@ export const Main = styled.div`
       }
 
       button {
-        z-index: 2;
+        z-index: 10;
         margin-top: 40px;
         background: #ffb930;
         animation: ${buttonAnim} 6.7s cubic-bezier(1, -0.3, 0.3, 1);

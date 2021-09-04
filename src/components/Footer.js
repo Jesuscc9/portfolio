@@ -20,8 +20,8 @@ const Footer = () => {
   return (
     <CustomFooter>
       <div className="contact">
+        <h2>Contact Me</h2>
         <Fade>
-          <h2>Contact Me</h2>
           <div className="phone">
             <FontAwesomeIcon icon={faPhoneAlt} />
             <p>(81) 1885-2578</p>
@@ -39,8 +39,8 @@ const Footer = () => {
         </Fade>
       </div>
       <div className="social">
+        <h2>Social Media</h2>
         <Fade>
-          <h2>Social Media</h2>
           {/* <div className="icons">
           <a href="https://jesuscc9.medium.com/" target="_blank">
             <FontAwesomeIcon icon={faMedium} />
