@@ -80,7 +80,7 @@ const ProjectImages = () => {
 const ProjectDescription = ({ name, description, shortName }) => {
   return (
     <motion.div className="description">
-      <h1>{name}</h1>
+      <h2>{name}</h2>
       <br />
       <p>
         {description} <Link to={`/${shortName}`}>View more</Link>

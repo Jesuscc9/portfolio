@@ -3,6 +3,7 @@ import "../GlobalStyles.css";
 import Navbar from "../components/Navbar";
 import AboutMe from "../components/AboutMe";
 import Illustration from "../components/Illustration";
+import Footer from "../components/Footer";
 import {
   ContactInfo,
   Main,
@@ -83,6 +84,7 @@ const IndexPage = () => {
       </Main>
       <AboutMe />
       <Projects />
+      <Footer />
       {/* <ContactInfo>
         <div className="email-info">
           <div className="rotate-text">

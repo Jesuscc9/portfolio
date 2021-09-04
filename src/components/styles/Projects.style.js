@@ -125,11 +125,7 @@ export const WorkContainer = styled.div`
         width: 450px;
         margin-right: 10px;
 
-        h1 {
-          margin: 0px;
-          font-family: "Asap", sans-serif;
-          font-size: 40px;
-          text-align: left;
+        h2 {
           color: rgba(82, 0, 146, 0.83);
         }
 
@@ -169,7 +165,7 @@ export const WorkContainer = styled.div`
       }
 
       .description {
-        h1 {
+        h2 {
           color: #b50000;
         }
 
@@ -180,14 +176,18 @@ export const WorkContainer = styled.div`
     }
 
     .physiology {
-      background-color: #eeeeee;
+      background-color: #e4e4e4;
 
       .images {
-        background: linear-gradient(0deg, #f3f3f3, #f3f3f3);
+        background: linear-gradient(
+          131.81deg,
+          rgba(183, 212, 255, 0.74) 2.5%,
+          rgba(113, 198, 255, 0.96) 99.98%
+        );
       }
 
       .description {
-        h1 {
+        h2 {
           color: #0072d7;
         }
 
@@ -209,7 +209,7 @@ export const WorkContainer = styled.div`
       }
 
       .description {
-        h1 {
+        h2 {
           color: #efbb00;
         }
 
@@ -231,7 +231,7 @@ export const WorkContainer = styled.div`
       }
 
       .description {
-        h1 {
+        h2 {
           color: #008b16;
         }
 
@@ -253,7 +253,7 @@ export const WorkContainer = styled.div`
       }
 
       .description {
-        h1 {
+        h2 {
           color: #005eca;
         }
 

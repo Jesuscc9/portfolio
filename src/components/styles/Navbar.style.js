@@ -48,7 +48,7 @@ export const Nav = styled.nav`
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   box-sizing: border-box;
-  min-height: 50px;
+  min-height: 65px;
 
   h1 {
     margin: 0px;
