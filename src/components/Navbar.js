@@ -51,7 +51,6 @@ const Navbar = ({ onContactClick }) => {
         </Link>
         <a
           onClick={() => {
-            console.log("xd");
             onContactClick();
           }}
         >

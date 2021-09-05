@@ -61,13 +61,17 @@ const Projects = () => {
 };
 
 const ProjectImages = ({ images }) => {
+  console.log(images);
   return (
     <motion.div className="images">
       <div className="image-container">
         <img src={PCFrame} className="pc" />
         <div className="pcgif-container">
           {/* <img src={images?.length > 0 ? images[0] : ReviewsicPC} alt="" /> */}
-          <img src={require("../assets/img/physiology/dashboard.jpg")} alt="" />
+          <img
+            src={require("../assets/images/physiology/dashboard.jpg")}
+            alt=""
+          />
         </div>
       </div>
       <div className="image-container">
