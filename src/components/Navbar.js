@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Nav } from "./styles/Navbar.style";
 import { Link } from "gatsby";
 import { watchViewport } from "tornis";
@@ -20,14 +20,16 @@ const Navbar = () => {
 
   watchViewport(updateValues);
 
+  const [activeNav, setActiveNav] = useState(false);
+
   return (
-    <Nav scrolled={scrolled}>
+    <Nav scrolled={scrolled} activeNav={activeNav}>
       <svg width="100">
         <text x="0%" y="55%">
           JECC
         </text>
       </svg>
-      <div className="menu">
+      <div className={`menu ${activeNav && "active-menu"}`}>
         <Link to="/about">
           About me
           <div className="svg-container">
@@ -53,8 +55,17 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-      <div className="menu-bar">
-        <FontAwesomeIcon icon={faBars} />
+
+      <div
+        id="nav-icon4"
+        class={`${activeNav && "open"}`}
+        onClick={(e) => {
+          setActiveNav(!activeNav);
+        }}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </Nav>
   );

@@ -72,7 +72,7 @@ export const CustomFooter = styled.footer`
     }
   }
 
-  @media (max-width: 583px) {
+  @media (max-width: 663px) {
     .contact {
       h2 {
         text-align: center;

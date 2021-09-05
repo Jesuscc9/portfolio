@@ -11,6 +11,7 @@ export const ProjectsData = [
     in their practices, and this app allows them to see their devices data and make some
     calculus with it.`,
     shortName: "physiology",
+    images: [require("../assets/img/physiology/dashboard.jpg")],
   },
   {
     name: "Camera App",

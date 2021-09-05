@@ -22,7 +22,7 @@ const Project = () => {
             >
               {even ? (
                 <>
-                  <ProjectImages />
+                  <ProjectImages images={project.images} />
                   <ProjectDescription
                     name={project.name}
                     description={project.description}
@@ -36,7 +36,7 @@ const Project = () => {
                     description={project.description}
                     shortName={project.shortName}
                   />
-                  <ProjectImages />
+                  <ProjectImages images={project.images} />
                 </>
               )}
             </motion.div>
@@ -60,13 +60,16 @@ const Projects = () => {
   );
 };
 
-const ProjectImages = () => {
+const ProjectImages = ({ images }) => {
+  console.log(images);
+
   return (
     <motion.div className="images">
       <div className="image-container">
         <img src={PCFrame} className="pc" />
         <div className="pcgif-container">
-          <img src={ReviewsicPC} alt="" />
+          {/* <img src={images?.length > 0 ? images[0] : ReviewsicPC} alt="" /> */}
+          <img src={require("../assets/img/physiology/dashboard.jpg")} alt="" />
         </div>
       </div>
       <div className="image-container">

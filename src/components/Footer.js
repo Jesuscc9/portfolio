@@ -44,31 +44,47 @@ const Footer = () => {
         <h2>Social Media</h2>
         <Fade>
           {/* <div className="icons">
-          <a href="https://jesuscc9.medium.com/" target="_blank">
+          <a href="https://jesuscc9.medium.com/" target="_blank" rel="noopener">
             <FontAwesomeIcon icon={faMedium} />
           </a>
-          <a href="https://www.instagram.com/jesuscc989/" target="_blank">
+          <a href="https://www.instagram.com/jesuscc989/" target="_blank" rel="noopener">
             <FontAwesomeIcon icon={faInstagramSquare} />
           </a>
-          <a href="https://github.com/Jesuscc9/" target="_blank">
+          <a href="https://github.com/Jesuscc9/" target="_blank" rel="noopener">
             <FontAwesomeIcon icon={faGithubSquare} />
           </a>
-          <a href="https://www.linkedin.com/in/jesuscc9/" target="_blank">
+          <a href="https://www.linkedin.com/in/jesuscc9/" target="_blank" rel="noopener">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>  */}
 
           <div className="icons">
-            <a href="https://jesuscc9.medium.com/" target="_blank">
+            <a
+              href="https://jesuscc9.medium.com/"
+              target="_blank"
+              rel="noopener"
+            >
               <FontAwesomeIcon icon={faMediumM} />
             </a>
-            <a href="https://www.instagram.com/jesuscc989/" target="_blank">
+            <a
+              href="https://www.instagram.com/jesuscc989/"
+              target="_blank"
+              rel="noopener"
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://github.com/Jesuscc9/" target="_blank">
+            <a
+              href="https://github.com/Jesuscc9/"
+              target="_blank"
+              rel="noopener"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href="https://www.linkedin.com/in/jesuscc9/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/jesuscc9/"
+              target="_blank"
+              rel="noopener"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </div>
