@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
+    "startDevelop": "gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"

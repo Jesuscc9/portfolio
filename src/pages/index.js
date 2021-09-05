@@ -53,7 +53,6 @@ const IndexPage = () => {
       </Shapes>
       <Navbar
         onContactClick={() => {
-          console.log("xd");
           contactRef.current.scrollIntoView({
             behavior: "smooth",
             block: "nearest",

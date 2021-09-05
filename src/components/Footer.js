@@ -8,12 +8,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
-  faGithubSquare,
   faInstagram,
-  faInstagramSquare,
-  faLinkedin,
   faLinkedinIn,
-  faMedium,
   faMediumM,
 } from "@fortawesome/free-brands-svg-icons";
 import Fade from "react-reveal/Fade";

@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 import { AboutmeContainer } from "./styles/AboutMe.style";
 import Fade from "react-reveal/Fade";
 
 const AboutMe = () => {
   return (
     <AboutmeContainer>
-      <Fade delay="200">
+      <Fade delay={200}>
         <div className="about-me">
           <h1>Who am I?</h1>
           <p>

@@ -51,9 +51,7 @@ export const Nav = styled.nav`
   top: 0px;
   z-index: 1;
   transition: background-color 0.4s ease, box-shadow 0.4s ease,
-    padding 0.4s ease,
-    max-height 0.5s ease-in-out
-      ${(props) => (props.activeNav ? "0.25s" : "0.3s")};
+    padding 0.4s ease, max-height 0.5s ease-in-out 0.3s;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   box-sizing: border-box;
@@ -99,6 +97,7 @@ export const Nav = styled.nav`
       color: #7c7c7c;
       font-weight: 600;
       text-decoration: none;
+      cursor: pointer;
 
       @media (max-width: 768px) {
         font-size: 18px;
@@ -171,7 +170,7 @@ export const Nav = styled.nav`
     transition: opacity 0.3s 0.5s;
   }
 
-  #nav-icon4 {
+  .nav-icon {
     width: 60px;
     height: 45px;
     position: relative;
@@ -185,9 +184,14 @@ export const Nav = styled.nav`
     transition: 0.5s ease-in-out;
     cursor: pointer;
     transform: scale(0.4);
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
   }
 
-  #nav-icon4 span {
+  .nav-icon span {
     display: block;
     position: absolute;
     height: 9px;
@@ -206,7 +210,7 @@ export const Nav = styled.nav`
     transition: 0.25s ease-in-out;
   }
 
-  #nav-icon4 span:nth-child(1) {
+  .nav-icon span:nth-child(1) {
     top: 0px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
@@ -214,7 +218,7 @@ export const Nav = styled.nav`
     transform-origin: left center;
   }
 
-  #nav-icon4 span:nth-child(2) {
+  .nav-icon span:nth-child(2) {
     top: 18px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
@@ -222,7 +226,7 @@ export const Nav = styled.nav`
     transform-origin: left center;
   }
 
-  #nav-icon4 span:nth-child(3) {
+  .nav-icon span:nth-child(3) {
     top: 36px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
@@ -230,7 +234,7 @@ export const Nav = styled.nav`
     transform-origin: left center;
   }
 
-  #nav-icon4.open span:nth-child(1) {
+  .nav-icon.open span:nth-child(1) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -239,12 +243,12 @@ export const Nav = styled.nav`
     left: 8px;
   }
 
-  #nav-icon4.open span:nth-child(2) {
+  .nav-icon.open span:nth-child(2) {
     width: 0%;
     opacity: 0;
   }
 
-  #nav-icon4.open span:nth-child(3) {
+  .nav-icon.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);

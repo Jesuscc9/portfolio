@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PCFrame from "../assets/img/PCFrame.png";
 import PhoneFrame from "../assets/img/PhoneFrameWithoutNotch.png";
 import ReviewsicPC from "../assets/img/Reviewsic/PC.gif";
@@ -61,8 +61,6 @@ const Projects = () => {
 };
 
 const ProjectImages = ({ images }) => {
-  console.log(images);
-
   return (
     <motion.div className="images">
       <div className="image-container">

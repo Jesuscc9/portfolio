@@ -18,7 +18,7 @@ const Illustration = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="illustration" clip-path="url(#clip0)">
+        <g id="illustration" clipPath="url(#clip0)">
           <motion.g
             id="background"
             initial={{ x: 900, opacity: 0 }}
