@@ -1,29 +1,44 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Nav } from "./styles/Navbar.style";
 import { Link } from "gatsby";
 import { watchViewport } from "tornis";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useScrollYPosition } from "react-use-scroll-position";
+import onClickOutside from "react-onclickoutside";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
-  const updateValues = ({ scroll }) => {
-    if (scroll.changed) {
-      if (scroll.top > 1 && !scrolled) {
-        setScrolled(true);
-      } else if (scroll.top == 0 && scrolled) {
-        setScrolled(false);
-      }
-    }
-  };
+  const scrollY = useScrollYPosition();
 
-  watchViewport(updateValues);
+  console.log("scrollY");
+  console.log(scrollY);
+
+  if (scrollY > 1 && !scrolled) {
+    setScrolled(true);
+  } else if (scrollY == 0 && scrolled) {
+    setScrolled(false);
+  }
 
   const [activeNav, setActiveNav] = useState(false);
 
+  useEffect(() => {
+    console.log(scrolled);
+  }, [scrolled]);
+
+  Navbar.handleClickOutside = () => {
+    setActiveNav(false);
+  };
+
   return (
-    <Nav scrolled={scrolled} activeNav={activeNav}>
+    <Nav
+      scrolled={scrolled || activeNav}
+      activeNav={activeNav}
+      onBlur={() => {
+        console.log("xdd");
+      }}
+    >
       <svg width="100">
         <text x="0%" y="55%">
           JECC
@@ -71,4 +86,8 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+const clickOutsideConfig = {
+  handleClickOutside: () => Navbar.handleClickOutside,
+};
+
+export default onClickOutside(Navbar, clickOutsideConfig);
