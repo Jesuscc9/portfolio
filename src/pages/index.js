@@ -39,6 +39,8 @@ const IndexPage = () => {
 
   const mailButtonRef = useRef(null);
 
+  const contactRef = useRef(null);
+
   return (
     <AnimateSharedLayout>
       <a href="mailto:jesus.cervantes0801@gmail.com" ref={mailButtonRef}></a>
@@ -49,7 +51,15 @@ const IndexPage = () => {
         <img src={Circle4} alt="" className="circle4" />
         <img src={Circle4} alt="" className="circle5" />
       </Shapes>
-      <Navbar />
+      <Navbar
+        onContactClick={() => {
+          console.log("xd");
+          contactRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+          });
+        }}
+      />
       <Main>
         <title>Jesús Cervantes l Portfolio</title>
         <div className="content">
@@ -91,7 +101,9 @@ const IndexPage = () => {
       </Main>
       <AboutMe />
       <Projects />
-      <Footer />
+      <div ref={contactRef}>
+        <Footer />
+      </div>
       {/* <ContactInfo>
         <div className="email-info">
           <div className="rotate-text">

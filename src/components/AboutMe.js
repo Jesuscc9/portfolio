@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { AboutmeContainer } from "./styles/AboutMe.style";
 import Fade from "react-reveal/Fade";
 

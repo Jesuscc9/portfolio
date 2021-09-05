@@ -1,13 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Nav } from "./styles/Navbar.style";
 import { Link } from "gatsby";
-import { watchViewport } from "tornis";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useScrollYPosition } from "react-use-scroll-position";
 import onClickOutside from "react-onclickoutside";
 
-const Navbar = () => {
+const Navbar = ({ onContactClick }) => {
   const [scrolled, setScrolled] = useState(false);
 
   const scrollY = useScrollYPosition();
@@ -32,13 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <Nav
-      scrolled={scrolled || activeNav}
-      activeNav={activeNav}
-      onBlur={() => {
-        console.log("xdd");
-      }}
-    >
+    <Nav scrolled={scrolled || activeNav} activeNav={activeNav}>
       <svg width="100">
         <text x="0%" y="55%">
           JECC
@@ -61,7 +52,12 @@ const Navbar = () => {
             </svg>
           </div>
         </Link>
-        <Link to="/asdasd">
+        <Link
+          onClick={() => {
+            onContactClick();
+            console.log("xd");
+          }}
+        >
           Contact
           <div className="svg-container">
             <svg viewBox="0 0 70 36" className="svg-3">
