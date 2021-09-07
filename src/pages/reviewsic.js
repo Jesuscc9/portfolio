@@ -1,19 +1,19 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { ProjectHeader } from "../styles/reviewsic.style";
+import { ProjectDescription, ProjectHeader } from "../styles/reviewsic.style";
 
 const ReviewsicPage = () => {
   return (
     <>
       <title>Jesús Cervantes l Reviewsic</title>
-      <Navbar></Navbar>
-      <ProjectHeader></ProjectHeader>
+      <Navbar />
+      <ProjectHeader />
       <br />
       <br />
-      <div className="project-description">
-        <h1>Reviewsic</h1>
+      <ProjectDescription>
+        <h2>Reviewsic</h2>
         <p>Buena app</p>
-      </div>
+      </ProjectDescription>
       <div className="project-image">
         <img src="" alt="" />
       </div>

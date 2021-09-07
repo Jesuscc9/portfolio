@@ -12,11 +12,11 @@ import {
 } from "../styles/index.style";
 import { motion } from "framer-motion";
 import Projects from "../components/Projects";
-import Circle1 from "../assets/img/shapes/circle1.svg";
-import Circle2 from "../assets/img/shapes/circle2.svg";
-import Circle3 from "../assets/img/shapes/circle3.svg";
-import Circle4 from "../assets/img/shapes/circle4.svg";
-import Rocket from "../assets/img/shapes/rocket.png";
+import Circle1 from "../assets/images/shapes/circle1.svg";
+import Circle2 from "../assets/images/shapes/circle2.svg";
+import Circle3 from "../assets/images/shapes/circle3.svg";
+import Circle4 from "../assets/images/shapes/circle4.svg";
+import Rocket from "../assets/images/shapes/rocket.png";
 import { unwatchViewport, watchViewport } from "tornis";
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { useRef } from "react";

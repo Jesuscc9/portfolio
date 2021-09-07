@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import "../GlobalStyles.css";
 import Navbar from "../components/Navbar";
 import Illustration from "../components/Illustration";
-import Donut from "../assets/img/Donut.png";
-import Sphere from "../assets/img/Sphere.png";
-import Tube from "../assets/img/Tube.png";
-import TubeShort from "../assets/img/TubeShort.png";
+import Donut from "../assets/images/Donut.png";
+import Sphere from "../assets/images/Sphere.png";
+import Tube from "../assets/images/Tube.png";
+import TubeShort from "../assets/images/TubeShort.png";
 import { Main, Shapes } from "../styles/index.style";
 import { motion } from "framer-motion";
-import icon from "../assets/img/Icon.png";
+import icon from "../assets/images/Icon.png";
 
 const AboutPage = () => {
   const [isHover, setIsHover] = useState(false);

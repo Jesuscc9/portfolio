@@ -157,6 +157,7 @@ export const Nav = styled.nav`
       position: relative;
       left: -10px;
       opacity: 0;
+      pointer-events: none;
       flex-direction: column;
 
       a {

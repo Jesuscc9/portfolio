@@ -1,8 +1,8 @@
 import React from "react";
-import PCFrame from "../assets/img/PCFrame.png";
-import PhoneFrame from "../assets/img/PhoneFrameWithoutNotch.png";
-import ReviewsicPC from "../assets/img/Reviewsic/PC.gif";
-import ReviewsicPhone from "../assets/img/Reviewsic/Phone.gif";
+import PCFrame from "../assets/images/PCFrame.png";
+import PhoneFrame from "../assets/images/PhoneFrameWithoutNotch.png";
+import ReviewsicPC from "../assets/images/Reviewsic/PC.gif";
+import ReviewsicPhone from "../assets/images/Reviewsic/Phone.gif";
 import { motion } from "framer-motion";
 import { WorkContainer } from "./styles/Projects.style";
 import { Link } from "gatsby";
@@ -68,10 +68,7 @@ const ProjectImages = ({ images }) => {
         <img src={PCFrame} className="pc" />
         <div className="pcgif-container">
           {/* <img src={images?.length > 0 ? images[0] : ReviewsicPC} alt="" /> */}
-          <img
-            src={require("../assets/images/physiology/dashboard.jpg")}
-            alt=""
-          />
+          <img src={require(`../assets/images${images[0]}`).default} alt="" />
         </div>
       </div>
       <div className="image-container">
