@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import { useScrollYPosition } from "react-use-scroll-position";
 import onClickOutside from "react-onclickoutside";
 
-const Navbar = ({ onContactClick }) => {
+function Navbar({ onContactClick }) {
   const [scrolled, setScrolled] = useState(false);
 
   const scrollY = useScrollYPosition();
@@ -75,7 +75,7 @@ const Navbar = ({ onContactClick }) => {
       </div>
     </Nav>
   );
-};
+}
 
 const clickOutsideConfig = {
   handleClickOutside: () => Navbar.handleClickOutside,
