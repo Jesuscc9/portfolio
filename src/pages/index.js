@@ -40,6 +40,7 @@ const IndexPage = () => {
   const mailButtonRef = useRef(null);
 
   const contactRef = useRef(null);
+  const aboutMeRef = useRef(null);
 
   return (
     <AnimateSharedLayout>
@@ -54,6 +55,12 @@ const IndexPage = () => {
       <Navbar
         onContactClick={() => {
           contactRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+          });
+        }}
+        onAboutClick={() => {
+          aboutMeRef.current.scrollIntoView({
             behavior: "smooth",
             block: "nearest",
           });
@@ -99,7 +106,9 @@ const IndexPage = () => {
         </div>
       </Main>
       <AboutMe />
-      <Projects />
+      <div ref={aboutMeRef}>
+        <Projects />
+      </div>
       <div ref={contactRef}>
         <Footer />
       </div>

@@ -61,7 +61,6 @@ export const CustomFooter = styled.footer`
       svg {
         font-size: 34px;
         color: #0066ff;
-        border-radius: 16px;
         transition: transform 0.2s, box-shadow 0.2s;
 
         &:hover {

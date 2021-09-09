@@ -107,6 +107,10 @@ export const Main = styled.div`
     flex-wrap: wrap;
     padding-top: 50px;
 
+    @media (max-width: 1286px) {
+      padding-top: 80px;
+    }
+
     .illustration {
       z-index: -1;
       img {

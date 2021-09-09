@@ -40,7 +40,7 @@ export const Nav = styled.nav`
   background-color: ${(props) =>
     props.scrolled ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0)"};
   backdrop-filter: ${(props) => (props.scrolled ? "blur(10px);" : "blur(0px)")};
-  padding: 10px ${(props) => (props.scrolled ? "30px" : "60px")};
+  padding: ${(props) => (props.scrolled ? "10px 30px" : "10px 60px")};
   box-shadow: ${(props) =>
     props.scrolled ? "rgba(149, 157, 165, 0.2) 0px 8px 24px;" : ""};
 
@@ -55,9 +55,9 @@ export const Nav = styled.nav`
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   box-sizing: border-box;
-  min-height: 65px;
   /* height: 60px; */
-  max-height: ${(props) => (props.activeNav ? "300px" : "65px")};
+  max-height: ${(props) =>
+    props.activeNav ? "300px" : props.scrolled ? "60px" : "65px"};
 
   h1 {
     margin: 0px;
@@ -67,21 +67,36 @@ export const Nav = styled.nav`
     color: #3f3f3f;
   }
 
-  svg {
-    text {
-      font-family: "Baloo 2", cursive;
-      font-size: 24px;
-      font-weight: 700;
-      color: #0085ff;
-      stroke-width: 1px;
-      stroke: #0085ff;
-      letter-spacing: 2px;
-      fill: rgba(0, 133, 255, 1);
-      transition: fill 0.3s;
-      animation: ${svgAnim} 2s;
+  .title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 30px;
+
+    a {
+      display: flex;
+      justify-content: center;
     }
 
-    height: 50px;
+    svg {
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      text {
+        font-family: "Baloo 2", cursive;
+        font-size: 24px;
+        font-weight: 700;
+        color: #0085ff;
+        stroke-width: 1px;
+        stroke: #0085ff;
+        letter-spacing: 2px;
+        fill: rgba(0, 133, 255, 1);
+        transition: fill 0.3s;
+        animation: ${svgAnim} 2s;
+        max-height: 24px;
+      }
+    }
   }
 
   .menu {
@@ -91,13 +106,13 @@ export const Nav = styled.nav`
     transition: opacity 0.3s 0.3s;
 
     a {
-      margin: 0px 30px;
       font-family: "Poppins", sans-serif;
       font-size: 16px;
       color: #7c7c7c;
       font-weight: 600;
       text-decoration: none;
       cursor: pointer;
+      margin: 0px 20px;
 
       @media (max-width: 768px) {
         font-size: 18px;
