@@ -80,11 +80,16 @@ export const Nav = styled.nav`
     }
 
     svg {
+      width: 62px;
       height: 28px;
       display: flex;
       justify-content: center;
       position: relative;
       top: 6px;
+
+      @media (max-width: 768px) {
+        top: 12px;
+      }
 
       text {
         font-family: "Baloo 2", cursive;
@@ -129,7 +134,7 @@ export const Nav = styled.nav`
           bottom: -7px;
           left: 2px;
           opacity: 0;
-          width: 76px;
+          width: 80px;
           height: 40px;
           transform: scaleX(1.3);
           fill: none;
@@ -175,8 +180,8 @@ export const Nav = styled.nav`
       position: relative;
       left: -10px;
       opacity: 0;
-      pointer-events: none;
       flex-direction: column;
+      pointer-events: none;
 
       a {
         margin: 20px 0px;
@@ -187,6 +192,10 @@ export const Nav = styled.nav`
   .active-menu {
     opacity: 1;
     transition: opacity 0.3s 0.5s;
+
+    @media (max-width: 768px) {
+      pointer-events: all;
+    }
   }
 
   .nav-icon {
