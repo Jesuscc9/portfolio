@@ -39,7 +39,7 @@ export const WorkContainer = styled.div`
 
       > * {
         &:last-child {
-          margin-bottom: 100px;
+          margin-bottom: 20px;
         }
       }
     }
@@ -177,6 +177,7 @@ export const WorkContainer = styled.div`
 
     .lpdla {
       background: rgba(255, 122, 0, 0.19);
+      margin-bottom: 16px;
 
       .images {
         background: linear-gradient(
@@ -283,6 +284,19 @@ export const WorkContainer = styled.div`
           color: #005eca;
         }
       }
+    }
+  }
+
+  .projects-text {
+    margin: auto;
+    width: 700px;
+    max-width: 90%;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+
+    a {
+      color: #0085ff;
+      font-weight: 500;
     }
   }
 `;

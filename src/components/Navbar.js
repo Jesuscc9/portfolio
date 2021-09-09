@@ -5,7 +5,7 @@ import { useScrollYPosition } from "react-use-scroll-position";
 import onClickOutside from "react-onclickoutside";
 import { watchViewport } from "tornis";
 
-function Navbar({ onContactClick, onAboutClick }) {
+function Navbar({ onContactClick, onAboutClick, onProjectsClick }) {
   const [scrolled, setScrolled] = useState(false);
 
   const updateValues = ({ scroll }) => {
@@ -43,17 +43,21 @@ function Navbar({ onContactClick, onAboutClick }) {
         </Link>
       </div>
       <div className={`menu ${activeNav && "active-menu"}`}>
-        <Link to="/about">
+        <a
+          onClick={() => {
+            onAboutClick();
+          }}
+        >
           About me
           <div className="svg-container">
             <svg viewBox="0 0 70 36">
               <path d="M6.9739 30.8153H63.0244C65.5269 30.8152 75.5358 -3.68471 35.4998 2.81531C-16.1598 11.2025 0.894099 33.9766 26.9922 34.3153C104.062 35.3153 54.5169 -6.68469 23.489 9.31527" />
             </svg>
           </div>
-        </Link>
+        </a>
         <a
           onClick={() => {
-            onAboutClick();
+            onProjectsClick();
           }}
         >
           My Projects

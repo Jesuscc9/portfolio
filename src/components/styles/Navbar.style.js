@@ -22,19 +22,12 @@ const svgAnim = keyframes`
   }
 `;
 
-const showMenu = keyframes`
-  0%{
-    max-height: 100px;
-  }
-
-  100%{
-    max-height: 200px;
-  }
-`;
-
 export const Nav = styled.nav`
   @media (max-width: 768px) {
-    padding: 10px ${(props) => (props.scrolled ? "30px" : "30px")};
+    padding: ${(props) => (props.scrolled ? "7px 30px" : "20px 20px")};
+
+    max-height: ${(props) =>
+      props.activeNav ? "300px" : props.scrolled ? "57px" : "70px"};
   }
 
   background-color: ${(props) =>

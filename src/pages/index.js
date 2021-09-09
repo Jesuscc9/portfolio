@@ -41,6 +41,7 @@ const IndexPage = () => {
 
   const contactRef = useRef(null);
   const aboutMeRef = useRef(null);
+  const projectsRef = useRef(null);
 
   return (
     <AnimateSharedLayout>
@@ -55,12 +56,21 @@ const IndexPage = () => {
       <Navbar
         onContactClick={() => {
           contactRef.current.scrollIntoView({
+            alignToTop: true,
             behavior: "smooth",
             block: "nearest",
           });
         }}
         onAboutClick={() => {
           aboutMeRef.current.scrollIntoView({
+            alignToTop: true,
+            behavior: "smooth",
+            block: "nearest",
+          });
+        }}
+        onProjectsClick={() => {
+          projectsRef.current.scrollIntoView({
+            alignToTop: true,
             behavior: "smooth",
             block: "nearest",
           });
@@ -105,8 +115,10 @@ const IndexPage = () => {
           </div>
         </div>
       </Main>
-      <AboutMe />
       <div ref={aboutMeRef}>
+        <AboutMe />
+      </div>
+      <div ref={projectsRef}>
         <Projects />
       </div>
       <div ref={contactRef}>
