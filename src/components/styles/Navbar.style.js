@@ -40,7 +40,7 @@ export const Nav = styled.nav`
   background-color: ${(props) =>
     props.scrolled ? "rgba(255, 255, 255, 0.4)" : "rgba(255, 255, 255, 0)"};
   backdrop-filter: ${(props) => (props.scrolled ? "blur(10px);" : "blur(0px)")};
-  padding: ${(props) => (props.scrolled ? "10px 30px" : "10px 60px")};
+  padding: ${(props) => (props.scrolled ? "15px 30px" : "25px 60px")};
   box-shadow: ${(props) =>
     props.scrolled ? "rgba(149, 157, 165, 0.2) 0px 8px 24px;" : ""};
 
@@ -57,7 +57,7 @@ export const Nav = styled.nav`
   box-sizing: border-box;
   /* height: 60px; */
   max-height: ${(props) =>
-    props.activeNav ? "300px" : props.scrolled ? "60px" : "65px"};
+    props.activeNav ? "300px" : props.scrolled ? "70px" : "75px"};
 
   h1 {
     margin: 0px;
@@ -83,6 +83,9 @@ export const Nav = styled.nav`
       height: 28px;
       display: flex;
       justify-content: center;
+      position: relative;
+      top: 6px;
+
       text {
         font-family: "Baloo 2", cursive;
         font-size: 24px;
