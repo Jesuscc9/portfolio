@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Nav } from "./styles/Navbar.style";
 import { Link } from "gatsby";
-import { useScrollYPosition } from "react-use-scroll-position";
 import onClickOutside from "react-onclickoutside";
 import { watchViewport } from "tornis";
 
-function Navbar({ onContactClick, onAboutClick, onProjectsClick }) {
+function Navbar({
+  onContactClick,
+  onAboutClick,
+  onProjectsClick,
+  titleColor,
+  menuColor,
+}) {
   const [scrolled, setScrolled] = useState(false);
 
   const updateValues = ({ scroll }) => {
@@ -27,7 +32,12 @@ function Navbar({ onContactClick, onAboutClick, onProjectsClick }) {
   };
 
   return (
-    <Nav scrolled={scrolled || activeNav} activeNav={activeNav}>
+    <Nav
+      scrolled={scrolled || activeNav}
+      activeNav={activeNav}
+      titleColor={titleColor}
+      menuColor={menuColor}
+    >
       <div className="title-container">
         <Link to="/">
           <svg>

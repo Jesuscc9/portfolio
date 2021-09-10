@@ -44,7 +44,7 @@ export const Nav = styled.nav`
   top: 0px;
   z-index: 1;
   transition: background-color 0.4s ease, box-shadow 0.4s ease,
-    padding 0.4s ease, max-height 0.5s ease-in-out 0.3s;
+    padding 0.4s ease, max-height 0.5s ease-in-out;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   box-sizing: border-box;
@@ -57,7 +57,6 @@ export const Nav = styled.nav`
     font-family: "Baloo 2", cursive;
     font-size: 24px;
     font-weight: 700;
-    color: #3f3f3f;
   }
 
   .title-container {
@@ -88,14 +87,16 @@ export const Nav = styled.nav`
         font-family: "Baloo 2", cursive;
         font-size: 24px;
         font-weight: 700;
-        color: #0085ff;
         stroke-width: 1px;
         stroke: #0085ff;
         letter-spacing: 2px;
-        fill: rgba(0, 133, 255, 1);
         transition: fill 0.3s;
         animation: ${svgAnim} 2s;
         max-height: 24px;
+
+        stroke: ${(props) => (props.titleColor ? props.titleColor : "#0085ff")};
+
+        fill: ${(props) => (props.titleColor ? props.titleColor : "#0085ff")};
       }
     }
   }
@@ -109,7 +110,7 @@ export const Nav = styled.nav`
     a {
       font-family: "Poppins", sans-serif;
       font-size: 16px;
-      color: #7c7c7c;
+      color: ${(props) => (props.menuColor ? props.menuColor : "#7c7c7c")};
       font-weight: 600;
       text-decoration: none;
       cursor: pointer;
