@@ -88,13 +88,13 @@ export const Main = styled.div`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    max-height: 110vh;
-    min-height: 110vh;
+    max-height: 100vh;
+    min-height: 100vh;
   }
 
   @media (max-width: 640px) {
-    max-height: 125vh;
-    min-height: 125vh;
+    max-height: 100vh;
+    min-height: 100vh;
   }
 
   .content {
@@ -122,7 +122,7 @@ export const Main = styled.div`
       @media (max-width: 1286px) {
         transform: scale(1);
         position: relative;
-        top: -60px;
+        top: -120px;
       }
 
       .vector {
@@ -141,21 +141,17 @@ export const Main = styled.div`
 
       h1 {
         font-family: "PT Sans", sans-serif;
-        font-size: calc(30px + 3.5vw);
+        font-size: clamp(42px, 5vw, 72px);
         font-weight: bold;
         color: #8b8b8b;
         text-align: left;
-
-        @media screen and (min-width: 1200px) {
-          font-size: 72px;
-        }
       }
 
       .name {
         font-family: "PT Sans", sans-serif;
         color: #0085ff;
         margin-bottom: 10px;
-        font-size: calc(46px + 4.5vw);
+        font-size: clamp(70px, 8vw, 92px);
 
         @media screen and (min-width: 1200px) {
           font-size: 84px;

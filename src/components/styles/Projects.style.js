@@ -30,7 +30,12 @@ export const WorkContainer = styled.div`
     }
 
     h1 {
-      margin-top: 200px;
+      margin-top: 20vh;
+      font-size: clamp(32px, calc(32px + 4vw), 64px);
+
+      @media (max-width: 768px) {
+        margin-top: 10vh;
+      }
     }
 
     .projects {
@@ -47,7 +52,7 @@ export const WorkContainer = styled.div`
     .project {
       width: 700px;
       margin: auto;
-      margin: 165px auto;
+      margin: 140px auto;
       border-radius: 10px;
       max-width: 90%;
       background-color: #f4e4ff;
