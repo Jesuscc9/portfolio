@@ -38,7 +38,7 @@ const Footer = () => {
       </div>
       <div className="social">
         <h2>Social Media</h2>
-        <Fade right>
+        <Fade right delay={300}>
           {/* <div className="icons">
           <a href="https://jesuscc9.medium.com/" target="_blank" rel="noopener">
             <FontAwesomeIcon icon={faMedium} />

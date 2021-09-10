@@ -294,9 +294,22 @@ export const WorkContainer = styled.div`
     padding-bottom: 80px;
     box-sizing: border-box;
 
+    li {
+      margin: 1rem 0px;
+    }
+
     a {
       color: #0085ff;
       font-weight: 500;
     }
+  }
+
+  summary {
+    cursor: pointer;
+    background-color: #e9e9e9;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    color: #6d6d6d;
+    font-weight: 500;
   }
 `;

@@ -29,15 +29,25 @@ export const ProjectsData = [
   },
   {
     name: "Smart Lights",
-    description: `In order to  controll personal flow between the different hospital areas, this app allows to control a the when to turn, how many time and the color of a light in a fence`,
+    description: `In order to  controll personal flow between the different hospital areas, this app allows to turn on the light of  a medical barrier light, when to turn on and how many time it will be on`,
     shortName: "lights",
     images: ["/physiology/dashboard.jpg"],
   },
   {
     name: "LPDLA",
-    description: `This is an web app to see the stats of my team with my friends of
-	League of Legends using the Riot API.`,
+    description: `This is an web app to see the stats of my League of Legends team (my friends) using the  Riot API.`,
     shortName: "lpdla",
     images: ["/physiology/dashboard.jpg"],
   },
+];
+
+export const OthersProjects = [
+  `A web client to display the value and the progress of a
+temperature sensor during the day, and send notifications if the
+temperature change suddenly.`,
+  `A web app to detect floods with an humidity sensor using an
+arduino that communicates with a web server. I made the arduino
+part too 😳.`,
+  `A web application to select two areas of an image, and see their RGB data in charts using Canvas API.`,
+  `Multiple responsive websites and a lot of CRUDS with PHP and some others with Node.js and Express.`,
 ];

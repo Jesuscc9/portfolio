@@ -8,7 +8,7 @@ const ReviewsicPage = () => {
   return (
     <>
       <title>Jesús Cervantes l Reviewsic</title>
-      <Navbar titleColor="#7c7c7c" menuColor="#545454" />
+      <Navbar titleColor="#545454" menuColor="#545454" />
       <ProjectHeader />
       <br />
       <br />
@@ -21,10 +21,64 @@ const ReviewsicPage = () => {
           </p>
         </div>
         <div className="tools">
-          <p>This were the used tools xd</p>
+          <p className="date">Dec 2020 - Now</p>
+          <div className="tools-list">
+            <h3>Role</h3>
+            <ul>
+              <li>Creator</li>
+            </ul>
+          </div>
+          <div className="tools-list">
+            <h3>Tools</h3>
+            <ul>
+              <li>React JS | Hooks | Redux</li>
+              <li>Node JS | Socket.io | Express</li>
+              <li>Reviewsic Rest API & Spotify API</li>
+              <li>Heroku Hosting </li>
+            </ul>
+          </div>
+          <div className="goal">
+            <h3>Goal</h3>
+            <p>
+              The main goal of Reviewsic is to connect people through music, and
+              generate world wide communities based on a specific topic to
+              discuss and share opinions, and why not, to make friends.
+            </p>
+          </div>
+          <div className="features">
+            <h3>Features</h3>
+            <ul>
+              <li>Real Time</li>
+              <li>Responsive</li>
+              <li>Animated</li>
+              <li>Real Time</li>
+              <li>Responsive</li>
+              <li>Animated</li>
+              <li>Real Time</li>
+              <li>Responsive</li>
+              <li>Animated</li>
+              <li>Real Time</li>
+              <li>Responsive</li>
+              <li>Animated</li>
+              <li>Real Time</li>
+              <li>Responsive</li>
+              <li>Animated</li>
+              <li>Real Time</li>
+              <li>Responsive</li>
+              <li>Animated</li>
+              <li>Real Time</li>
+              <li>Responsive</li>
+              <li>Animated</li>
+              <li>Real Time</li>
+              <li>Responsive</li>
+              <li>Animated</li>
+            </ul>
+          </div>
         </div>
         <div className="project-image">
-          <img src={img} alt="" />
+          <div className="image-container">
+            <img src={img} alt="" />
+          </div>
         </div>
       </ProjectDescription>
     </>
