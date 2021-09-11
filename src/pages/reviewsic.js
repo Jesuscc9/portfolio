@@ -1,17 +1,24 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { ProjectDescription, ProjectHeader } from "../styles/reviewsic.style";
+import {
+  ProjectDescription,
+  ProjectHeader,
+  GlobalStyles,
+} from "../styles/reviewsic.style";
 
 import img from "../assets/images/IphoneXMockup.png";
+import Footer from "../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const ReviewsicPage = () => {
   return (
     <>
       <title>Jesús Cervantes l Reviewsic</title>
+      <GlobalStyles />
       <Navbar titleColor="#545454" menuColor="#545454" />
       <ProjectHeader />
-      <br />
-      <br />
       <ProjectDescription>
         <div className="description">
           <h2>Reviewsic</h2>
@@ -21,6 +28,14 @@ const ReviewsicPage = () => {
           </p>
         </div>
         <div className="tools">
+          <div className="buttons-container">
+            <button className="app-button-reviewsic">
+              Visit App <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </button>
+            <button className="github-button">
+              Github <FontAwesomeIcon icon={faGithub} />
+            </button>
+          </div>
           <p className="date">Dec 2020 - Now</p>
           <div className="tools-list">
             <h3>Role</h3>
@@ -51,27 +66,6 @@ const ReviewsicPage = () => {
               <li>Real Time</li>
               <li>Responsive</li>
               <li>Animated</li>
-              <li>Real Time</li>
-              <li>Responsive</li>
-              <li>Animated</li>
-              <li>Real Time</li>
-              <li>Responsive</li>
-              <li>Animated</li>
-              <li>Real Time</li>
-              <li>Responsive</li>
-              <li>Animated</li>
-              <li>Real Time</li>
-              <li>Responsive</li>
-              <li>Animated</li>
-              <li>Real Time</li>
-              <li>Responsive</li>
-              <li>Animated</li>
-              <li>Real Time</li>
-              <li>Responsive</li>
-              <li>Animated</li>
-              <li>Real Time</li>
-              <li>Responsive</li>
-              <li>Animated</li>
             </ul>
           </div>
         </div>
@@ -81,6 +75,7 @@ const ReviewsicPage = () => {
           </div>
         </div>
       </ProjectDescription>
+      <Footer />
     </>
   );
 };

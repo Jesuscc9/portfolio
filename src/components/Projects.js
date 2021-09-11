@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { WorkContainer } from "./styles/Projects.style";
 import { Link } from "gatsby";
 import LightSpeed from "react-reveal/LightSpeed";
+import Zoom from "react-reveal/Zoom";
 import { ProjectsData, OthersProjects } from "../data/ProjectsData";
 
 const Project = () => {
@@ -17,29 +18,31 @@ const Project = () => {
 
         return (
           <LightSpeed {...{ left: even, right: !even }}>
-            <motion.div
-              className={`project ${project.shortName} ${even && "even"}`}
-            >
-              {even ? (
-                <>
-                  <ProjectImages images={project.images} />
-                  <ProjectDescription
-                    name={project.name}
-                    description={project.description}
-                    shortName={project.shortName}
-                  />
-                </>
-              ) : (
-                <>
-                  <ProjectDescription
-                    name={project.name}
-                    description={project.description}
-                    shortName={project.shortName}
-                  />
-                  <ProjectImages images={project.images} />
-                </>
-              )}
-            </motion.div>
+            <Link to={`${project.shortName}`}>
+              <motion.div
+                className={`project ${project.shortName} ${even && "even"}`}
+              >
+                {even ? (
+                  <>
+                    <ProjectImages images={project.images} />
+                    <ProjectDescription
+                      name={project.name}
+                      description={project.description}
+                      shortName={project.shortName}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <ProjectDescription
+                      name={project.name}
+                      description={project.description}
+                      shortName={project.shortName}
+                    />
+                    <ProjectImages images={project.images} />
+                  </>
+                )}
+              </motion.div>
+            </Link>
           </LightSpeed>
         );
       })}
@@ -55,24 +58,26 @@ const Projects = () => {
         <div className="projects">
           <Project />
         </div>
-        <div className="projects-text">
-          <details>
-            <summary>
-              These are just my latest and more relevant projects but I've done
-              different things like:
-            </summary>
-            <ul>
-              {OthersProjects.map((project) => {
-                return <li>{project}</li>;
-              })}
+        <Zoom left>
+          <div className="projects-text">
+            <details>
+              <summary>
+                These are just my latest and more relevant projects but I've
+                done different things like:
+              </summary>
+              <ul>
+                {OthersProjects.map((project) => {
+                  return <li>{project}</li>;
+                })}
 
-              <li>
-                And also some <Link to="/about">science projects</Link>...
-              </li>
-            </ul>
-          </details>
-          <br />
-        </div>
+                <li>
+                  And also some <Link to="/about">science projects</Link>...
+                </li>
+              </ul>
+            </details>
+            <br />
+          </div>
+        </Zoom>
       </motion.div>
     </WorkContainer>
   );
@@ -102,7 +107,6 @@ const ProjectDescription = ({ name, description, shortName }) => {
   return (
     <motion.div className="description">
       <h2>{name}</h2>
-      <br />
       <p>
         {description} <Link to={`/${shortName}`}>View more</Link>
       </p>

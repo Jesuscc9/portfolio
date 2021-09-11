@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
 
 const gradientAnimation = keyframes`
   0% {
@@ -9,6 +9,13 @@ const gradientAnimation = keyframes`
   }
   100% {
     background-position: 0% 50%;
+  }
+`;
+
+export const GlobalStyles = createGlobalStyle`
+  body{
+    background-color: #fff !important;
+    background: #fff !important;
   }
 `;
 
@@ -29,8 +36,9 @@ export const ProjectHeader = styled.div`
   /* background-size: 400% 100%; */
   animation: ${gradientAnimation} 12s ease infinite;
   background-repeat: no-repeat;
-  height: 44vh;
-  position: fixed;
+  height: 40vh;
+  position: absolute;
+  top: 0px;
 `;
 
 export const ProjectDescription = styled.div`
@@ -39,24 +47,25 @@ export const ProjectDescription = styled.div`
   row-gap: 20px;
   width: 90%;
   margin: auto;
-  margin-top: 10vh;
   grid-template-areas: "image description" "image tools ";
-  border: 1px solid;
   column-gap: 1.5rem;
-  overflow: scroll;
-  max-height: 80vh;
-
-  grid-template-rows: calc(40vh - 6vh) auto;
+  margin-top: 15vh;
+  grid-template-rows: calc(20vh) auto;
+  margin-bottom: 120px;
 
   @media (max-width: 850px) {
+    margin-top: 10vh;
     grid-template-columns: 1fr;
     grid-template-areas: "description" "image" "tools ";
     grid-template-rows: auto auto;
-    margin-top: 4vh;
+  }
+
+  @media (min-width: 768px) {
+    max-height: 92vh;
+    min-height: 92vh;
   }
 
   div {
-    /* border: 1px solid; */
   }
 
   .description {
@@ -78,7 +87,7 @@ export const ProjectDescription = styled.div`
       }
 
       p {
-        width: 90%;
+        width: 85%;
         margin: auto;
       }
     }
@@ -87,17 +96,15 @@ export const ProjectDescription = styled.div`
   .project-image {
     grid-area: image;
     margin: 10px auto;
-    border: 1px solid;
 
     .image-container {
-      border: 1px solid;
-      position: sticky;
-      top: 0;
+      display: flex;
+      justify-content: center;
 
       img {
-        border: 1px solid;
         width: 100px;
         width: clamp(230px, 80%, 350px);
+        max-height: 100%;
       }
     }
 
@@ -108,6 +115,37 @@ export const ProjectDescription = styled.div`
 
   .tools {
     grid-area: tools;
+    overflow-x: scroll;
+
+    .buttons-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        margin: 0px 10px;
+        padding: 4px 16px;
+        font-size: 14px;
+
+        svg {
+          margin-left: 8px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin: 25px 0px;
+        margin-bottom: 45px;
+        justify-content: center;
+      }
+
+      .app-button-reviewsic {
+        background-color: #6e00cc;
+      }
+
+      .github-button {
+        background-color: #333;
+      }
+    }
 
     p {
       color: #000;
@@ -117,6 +155,7 @@ export const ProjectDescription = styled.div`
       font-size: 16px;
       font-weight: bold;
       color: #8c8c8c;
+      position: sticky;
     }
 
     h3 {
@@ -137,7 +176,7 @@ export const ProjectDescription = styled.div`
     font-family: "Baloo 2", sans-serif;
     font-weight: 800;
     color: #6e00cc;
-    font-size: clamp(40px, calc(26px + 4.8vw), 68px);
+    font-size: clamp(50px, 5.5vw, 72px);
     text-transform: uppercase;
 
     background: linear-gradient(

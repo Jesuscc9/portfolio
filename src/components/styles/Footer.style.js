@@ -5,6 +5,7 @@ export const CustomFooter = styled.footer`
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 60px 30px;
+  background: radial-gradient(50% 50% at 50% 50%, #eef7ff 29.17%, #eff8ff 100%);
 
   h2 {
     font-size: 30px;

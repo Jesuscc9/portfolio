@@ -135,7 +135,7 @@ export const WorkContainer = styled.div`
         }
 
         p {
-          margin-top: 0px;
+          margin-top: 1.2rem;
           font-size: 16px;
           font-family: "Poppins", sans-serif;
           text-align: justify;
