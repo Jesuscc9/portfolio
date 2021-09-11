@@ -18,7 +18,7 @@ const Project = () => {
 
         return (
           <LightSpeed {...{ left: even, right: !even }}>
-            <Link to={`${project.shortName}`}>
+            <Link to={`/projects/${project.shortName}`}>
               <motion.div
                 className={`project ${project.shortName} ${even && "even"}`}
               >
@@ -58,7 +58,7 @@ const Projects = () => {
         <div className="projects">
           <Project />
         </div>
-        <Zoom left>
+        <Zoom left delay="200">
           <div className="projects-text">
             <details>
               <summary>

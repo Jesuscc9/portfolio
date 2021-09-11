@@ -4,7 +4,25 @@ export const ProjectsData = [
     description: `Reviewsic is a place where you can share your favorite music with
 	everyone, and also interact with other’s reviews.`,
     shortName: "reviewsic",
-    images: ["/Reviewsic/PC.gif"],
+    images: ["/Reviewsic/PC.gif", "/Reviewsic/Phone.gif"],
+    link: "https://reviewsic.herokuapp.com/",
+    github: "https://github.com/Jesuscc9/Reviewsic",
+    date: {
+      from: "Dec 2021",
+      to: "now",
+    },
+    role: "Creator",
+    tools: [
+      ["React JS", "Hooks", "Redux"],
+      ["Node JS", "Socket.io", "Express"],
+      ["Reviewsic Rest API", "Spotify API"],
+      ["Git", "Github"],
+      ["Heroku Hosting"],
+    ],
+    goal: `The main goal of Reviewsic is to connect people through music, and
+    generate world wide communities based on a specific topic to
+    discuss and share opinions, and why not, to make friends.`,
+    features: ["Real Time", "Responsive", "Animated"],
   },
   {
     name: "Physiology Dashboard",

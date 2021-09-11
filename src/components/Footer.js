@@ -40,16 +40,16 @@ const Footer = () => {
         <h2>Social Media</h2>
         <Fade right delay={300}>
           {/* <div className="icons">
-          <a href="https://jesuscc9.medium.com/" target="_blank" rel="noopener">
+          <a href="https://jesuscc9.medium.com/" rel="noreferrer" target="_blank" rel="noopener">
             <FontAwesomeIcon icon={faMedium} />
           </a>
-          <a href="https://www.instagram.com/jesuscc989/" target="_blank" rel="noopener">
+          <a href="https://www.instagram.com/jesuscc989/" rel="noreferrer" target="_blank" rel="noopener">
             <FontAwesomeIcon icon={faInstagramSquare} />
           </a>
-          <a href="https://github.com/Jesuscc9/" target="_blank" rel="noopener">
+          <a href="https://github.com/Jesuscc9/" rel="noreferrer" target="_blank" rel="noopener">
             <FontAwesomeIcon icon={faGithubSquare} />
           </a>
-          <a href="https://www.linkedin.com/in/jesuscc9/" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/in/jesuscc9/" rel="noreferrer" target="_blank" rel="noopener">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>  */}
@@ -57,6 +57,7 @@ const Footer = () => {
           <div className="icons">
             <a
               href="https://jesuscc9.medium.com/"
+              rel="noreferrer"
               target="_blank"
               rel="noopener"
             >
@@ -64,6 +65,7 @@ const Footer = () => {
             </a>
             <a
               href="https://www.instagram.com/jesuscc989/"
+              rel="noreferrer"
               target="_blank"
               rel="noopener"
             >
@@ -71,6 +73,7 @@ const Footer = () => {
             </a>
             <a
               href="https://github.com/Jesuscc9/"
+              rel="noreferrer"
               target="_blank"
               rel="noopener"
             >
@@ -78,6 +81,7 @@ const Footer = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/jesuscc9/"
+              rel="noreferrer"
               target="_blank"
               rel="noopener"
             >

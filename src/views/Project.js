@@ -12,35 +12,38 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const ReviewsicPage = () => {
+const ProjectView = ({ project }) => {
   return (
     <>
-      <title>Jesús Cervantes l Reviewsic</title>
+      <title>Jesús Cervantes l {project.name}</title>
       <GlobalStyles />
       <Navbar titleColor="#545454" menuColor="#545454" />
       <ProjectHeader />
       <ProjectDescription>
         <div className="description">
-          <h2>Reviewsic</h2>
-          <p>
-            Reviewsic is a place where you can share your favorite music with
-            everyone, and also interact with other’s reviews.
-          </p>
+          <h2>{project.name}</h2>
+          <p>{project.description}</p>
         </div>
         <div className="tools">
           <div className="buttons-container">
-            <button className="app-button-reviewsic">
-              Visit App <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </button>
-            <button className="github-button">
-              Github <FontAwesomeIcon icon={faGithub} />
-            </button>
+            <a href={project.link} target="_blank" rel="">
+              <button className="app-button-reviewsic">
+                Visit App <FontAwesomeIcon icon={faExternalLinkAlt} />
+              </button>
+            </a>
+            <a href={project.github} target="_blank" rel="">
+              <button className="github-button">
+                Github <FontAwesomeIcon icon={faGithub} />
+              </button>
+            </a>
           </div>
-          <p className="date">Dec 2020 - Now</p>
+          <p className="date">
+            {project.date.from} - {project.date.to}
+          </p>
           <div className="tools-list">
             <h3>Role</h3>
             <ul>
-              <li>Creator</li>
+              <li>{project.role}</li>
             </ul>
           </div>
           <div className="tools-list">
@@ -54,11 +57,7 @@ const ReviewsicPage = () => {
           </div>
           <div className="goal">
             <h3>Goal</h3>
-            <p>
-              The main goal of Reviewsic is to connect people through music, and
-              generate world wide communities based on a specific topic to
-              discuss and share opinions, and why not, to make friends.
-            </p>
+            <p>{project.goal}</p>
           </div>
           <div className="features">
             <h3>Features</h3>
@@ -80,4 +79,4 @@ const ReviewsicPage = () => {
   );
 };
 
-export default ReviewsicPage;
+export default ProjectView;
