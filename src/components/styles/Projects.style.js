@@ -5,7 +5,7 @@ export const WorkContainer = styled.div`
   width: 100%;
   background-color: #fff;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     #eff8ff 0%,
     #eff8ff 0.01%,
@@ -16,7 +16,9 @@ export const WorkContainer = styled.div`
     #fffff2 65.1%,
     #fff4eb 79.69%,
     #ffffff 91.15%
-  );
+  ); */
+
+  background: linear-gradient(180deg, #eff8ff 0%, #eff8ff 0.01%, #ffffff 20%);
 
   .content {
     width: 90%;
@@ -57,12 +59,15 @@ export const WorkContainer = styled.div`
       max-width: 90%;
       background-color: #f4e4ff;
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: transform 0.2s, border 0.4s;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 20px;
       text-decoration: none !important;
+      box-shadow: #f0daff 0px 8px 50px;
+      border: 2px solid rgba(255, 255, 255, 0);
+      border-bottom: 2px solid #efd8ff;
 
       p {
         text-decoration: none !important;
@@ -150,6 +155,7 @@ export const WorkContainer = styled.div`
       }
 
       &:hover {
+        border: 2px solid #efd8ff;
         transform: scale(1.02);
       }
     }
@@ -184,6 +190,10 @@ export const WorkContainer = styled.div`
       background: rgba(255, 122, 0, 0.19);
       margin-bottom: 16px;
 
+      box-shadow: rgba(255, 122, 0, 0.2) 0px 8px 50px;
+      border: 2px solid rgba(255, 255, 255, 0);
+      border-bottom: 2px solid rgba(255, 122, 0, 0.15);
+
       .images {
         background: linear-gradient(
           131.81deg,
@@ -201,10 +211,17 @@ export const WorkContainer = styled.div`
           color: #b50000;
         }
       }
+
+      &:hover {
+        border: 2px solid rgba(255, 122, 0, 0.15);
+      }
     }
 
     .physiology {
       background-color: #e4e4e4;
+      box-shadow: #dedede 0px 8px 50px;
+      border: 2px solid rgba(255, 255, 255, 0);
+      border-bottom: 2px solid #dadada;
 
       .images {
         background: linear-gradient(
@@ -223,10 +240,17 @@ export const WorkContainer = styled.div`
           color: #0072d7;
         }
       }
+
+      &:hover {
+        border: 2px solid #dadada;
+      }
     }
 
     .lights {
       background-color: #fffac3;
+      box-shadow: #fff9b9 0px 8px 50px;
+      border: 2px solid rgba(255, 255, 255, 0);
+      border-bottom: 2px solid #f9f08b;
 
       .images {
         background: linear-gradient(
@@ -245,10 +269,17 @@ export const WorkContainer = styled.div`
           color: #efbb00;
         }
       }
+
+      &:hover {
+        border: 2px solid #f9f08b;
+      }
     }
 
     .camera {
       background: rgba(77, 215, 67, 0.15);
+      box-shadow: rgba(77, 215, 67, 0.22) 0px 8px 50px;
+      border: 2px solid rgba(255, 255, 255, 0);
+      border-bottom: 2px solid rgba(77, 215, 67, 0.25);
 
       .images {
         background: linear-gradient(
@@ -267,10 +298,17 @@ export const WorkContainer = styled.div`
           color: #008b16;
         }
       }
+
+      &:hover {
+        border: 2px solid rgba(77, 215, 67, 0.25);
+      }
     }
 
     .covid {
-      background: rgba(0, 117, 255, 0.12);
+      background: rgba(0, 117, 255, 0.2);
+      box-shadow: rgba(0, 117, 255, 0.2) 0px 8px 50px;
+      border: 2px solid rgba(255, 255, 255, 0);
+      border-bottom: 2px solid rgba(0, 117, 255, 0.15);
 
       .images {
         background: linear-gradient(
@@ -288,6 +326,10 @@ export const WorkContainer = styled.div`
         a {
           color: #005eca;
         }
+      }
+
+      &:hover {
+        border: 2px solid rgba(0, 117, 255, 0.15);
       }
     }
   }

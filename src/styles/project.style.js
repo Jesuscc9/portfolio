@@ -61,8 +61,8 @@ export const ProjectDescription = styled.div`
   }
 
   @media (min-width: 768px) {
-    max-height: 92vh;
-    min-height: 92vh;
+    /* max-height: 92vh;
+    min-height: 92vh; */
   }
 
   div {
@@ -113,9 +113,25 @@ export const ProjectDescription = styled.div`
     }
   }
 
+  .challenge {
+    p {
+      text-align: justify;
+    }
+  }
+
   .tools {
     grid-area: tools;
     overflow-x: scroll;
+
+    @media (max-width: 850px) {
+      width: 95%;
+      margin: auto;
+    }
+
+    @media (max-width: 768px) {
+      width: 90%;
+      margin: auto;
+    }
 
     .buttons-container {
       width: 100%;
@@ -132,7 +148,7 @@ export const ProjectDescription = styled.div`
         }
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 850px) {
         margin: 25px 0px;
         margin-bottom: 45px;
         justify-content: center;

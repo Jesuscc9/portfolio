@@ -4,7 +4,7 @@ import {
   ProjectDescription,
   ProjectHeader,
   GlobalStyles,
-} from "../styles/project.style";
+} from "../styles/reviewsic.style";
 
 import img from "../assets/images/IphoneXMockup.png";
 import Footer from "../components/Footer";
@@ -28,8 +28,7 @@ const ProjectView = ({ project }) => {
           <div className="buttons-container">
             <a href={project.link} target="_blank" rel="">
               <button className="app-button-reviewsic">
-                Visit App
-                <FontAwesomeIcon icon={faExternalLinkAlt} />
+                Visit App <FontAwesomeIcon icon={faExternalLinkAlt} />
               </button>
             </a>
             <a href={project.github} target="_blank" rel="">
@@ -49,16 +48,24 @@ const ProjectView = ({ project }) => {
           </div>
           <div className="tools-list">
             <h3>Tools</h3>
-
-            <ToolsList tools={project.tools} />
+            <ul>
+              <li>React JS | Hooks | Redux</li>
+              <li>Node JS | Socket.io | Express</li>
+              <li>Reviewsic Rest API & Spotify API</li>
+              <li>Heroku Hosting </li>
+            </ul>
           </div>
-          <div className="challenge">
-            <h3>Challenge</h3>
-            <p>{project.challenge}</p>
+          <div className="goal">
+            <h3>Goal</h3>
+            <p>{project.goal}</p>
           </div>
           <div className="features">
             <h3>Features</h3>
-            <Features features={project.features} />
+            <ul>
+              <li>Real Time</li>
+              <li>Responsive</li>
+              <li>Animated</li>
+            </ul>
           </div>
         </div>
         <div className="project-image">
@@ -69,32 +76,6 @@ const ProjectView = ({ project }) => {
       </ProjectDescription>
       <Footer />
     </>
-  );
-};
-
-const ToolsList = ({ tools }) => {
-  return (
-    <ul>
-      {tools.map((tool) => {
-        return (
-          <li>
-            {tool.map((el, i) => {
-              return `${el} ${i != tool.length - 1 ? "|" : ""} `;
-            })}
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
-
-const Features = ({ features }) => {
-  return (
-    <ul>
-      {features.map((feature) => {
-        return <li>{feature}</li>;
-      })}
-    </ul>
   );
 };
 
