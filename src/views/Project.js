@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 const ProjectView = ({ project }) => {
   return (
@@ -21,7 +22,9 @@ const ProjectView = ({ project }) => {
       <ProjectHeader />
       <ProjectDescription>
         <div className="description">
-          <h2>{project.name}</h2>
+          <motion.h2 initial={{ x: +100 }} animate={{ x: 0 }}>
+            {project.name}
+          </motion.h2>
           <p>{project.description}</p>
         </div>
         <div className="tools">
@@ -63,7 +66,7 @@ const ProjectView = ({ project }) => {
         </div>
         <div className="project-image">
           <div className="image-container">
-            <img src={img} alt="" />
+            <motion.img src={img} initial={{ x: -200 }} animate={{ x: 0 }} />
           </div>
         </div>
       </ProjectDescription>

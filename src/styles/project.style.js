@@ -76,6 +76,11 @@ export const ProjectDescription = styled.div`
       text-align: justify;
     }
 
+    p {
+      font-weight: 400;
+      font-size: 18px;
+    }
+
     @media (max-width: 850px) {
       h2,
       p {
@@ -84,11 +89,9 @@ export const ProjectDescription = styled.div`
 
       p {
         margin-top: 12px;
-      }
-
-      p {
         width: 85%;
         margin: auto;
+        font-size: 14px;
       }
     }
   }
