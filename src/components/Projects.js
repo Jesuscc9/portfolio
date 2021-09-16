@@ -108,7 +108,7 @@ const ProjectDescription = ({ name, description, shortName }) => {
     <motion.div className="description">
       <h2>{name}</h2>
       <p>
-        {description} <Link to={`/${shortName}`}>View more</Link>
+        {description} <Link to={`/projects/${shortName}`}>View more</Link>
       </p>
     </motion.div>
   );
